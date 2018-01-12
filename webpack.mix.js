@@ -27,4 +27,8 @@ mix.styles([
     'resources/assets/js/jqBootstrapValidation.js',
     'resources/assets/js/contact_me.js',
     'resources/assets/js/main.js'
-], 'public/js/app.js').extract(['jquery','vue']);
+], 'public/js/app.js')
+   .extract([
+    'jquery',
+    'vue'
+]);
