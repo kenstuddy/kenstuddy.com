@@ -161,7 +161,22 @@ h1, h2, h3, h4, h5, h6 {
         padding: 20px;
     }
 }
-
+/* Media query for fixing social buttons in mobile size. */
+@media (max-width: 993px) {
+    .btn-default.hire-me
+    {
+        margin: 20px 0 0 20px !important;
+    }
+    .socia-icons .btn
+    {
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+    }
+    .my-name, .my-title 
+    {
+        margin-left: 25px !important;   
+    }
+}
 #grid .mix .thumbnail {
     border: 2px thin #F7F7F7;
     padding: 0;
@@ -412,13 +427,15 @@ label.valid {
 /* ==========================================================================
    Social icons
    ========================================================================== */
-
-.socia-icons .btn {
-    /* Should be 15px for more than 2 icons. */
-    margin-right: 10px;
-    /* Need to remove this if adding more than 2 icons. */
-    margin-left: 10px;
+@media (min-width: 994px) {
+    .socia-icons .btn {
+        /* Should be 15px for more than 2 icons. */
+        margin-right: 10px;
+        /* Need to remove this if adding more than 2 icons. */
+        margin-left: 10px;
+    }
 }
+
 .socia-icons {
     padding-top: 10px;
     margin-bottom: 35px;

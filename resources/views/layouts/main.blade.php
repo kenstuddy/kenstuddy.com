@@ -12,8 +12,8 @@
             <div class="container">
                     <div>
                     <header class="centered">
-                        <h1>Ken Studdy</h1>
-                        <p>FULL STACK WEB DEVELOPER</p>
+                        <h1 class="my-name">Ken Studdy</h1>
+                        <p class="my-title">FULL STACK WEB DEVELOPER</p>
                     </header>
                     <div class="socia-icons">
                         <a href="https://www.linkedin.com/in/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
