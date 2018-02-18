@@ -1,3 +1,82 @@
+/* Media query for fixing social buttons in mobile size and adding padding to portfolio images. */
+@media (max-width: 993px) {
+    .btn-default.hire-me {
+        margin: 0 0 0 0 !important;
+    }
+    .socia-icons .btn {
+        margin-right: 10px !important;
+        margin-left: 10px !important;
+    }
+    .grid-wrapper img {
+        padding: 20px;
+    }
+    .centered {
+        margin-top: 200px;
+    }
+    #page-profile .profile {
+        margin: 0 auto 20px auto;
+    }
+}
+
+/* 
+ * In order to achieve a nice blue hover effect we need to have opacity .1 for .overlayblue
+ * with a blue colour, and opacity .8 for the regular .overlay hover with no background colour
+ * in the regular .overlay hover otherwise it will overwrite our blue colour.
+ * We can either have the background colour in .overlay or .overlayblue but NOT both, 
+ * and we get a slightly darker blue if we put the background colour in .overlayblue.
+ * We must put only class overlayblue on the img tag and only class overlay on the div tag that 
+ * contains the img tag. 
+ */
+@media (min-width: 993px) {
+   .overlayblue:hover {
+        background: #4ea6e0;
+        opacity: .1;
+    }
+    #grid .mix .overlay:hover {
+    opacity: .8;
+    }
+    #grid .mix .overlay {
+        background: #3498db;
+    }
+    .centered {
+        margin-top: -100px;
+    }
+    .socia-icons .btn {
+        /* Should be 15px for more than 2 icons. */
+        margin-right: 10px;
+        /* Need to remove this if adding more than 2 icons. */
+        margin-left: 10px;
+    }
+    .btn-default.hire-me {
+        margin: 0 0 0 0 !important;
+    }
+}
+
+@media (max-width: 479px) {
+    #page-welcome header h1 {
+        font-size: 2em;
+    }
+    #page-welcome header p {
+        font-size: 1em;
+        line-height: 3em;
+    }
+    .section-title {
+        font-size: 1.5em;
+    }
+    .section-header p {
+        font-size: 1.2em;
+    }
+    #page-skills {
+        text-align: center;
+    }
+    #grid {
+        text-align: center;
+    }
+    #page-profile .profile {
+        margin: 0 auto 20px auto;
+    }
+}
+
 /* ==========================================================================
    Social Icon Fixes
    ========================================================================== */
@@ -154,53 +233,11 @@ h1, h2, h3, h4, h5, h6 {
 .center-pills {
     display: inline-block;
 }
-/* Media query for adding padding to portfolio images in mobile size. */
-@media (max-width: 993px) {
-    .grid-wrapper img
-    {
-        padding: 20px;
-    }
-}
-/* Media query for fixing social buttons in mobile size. */
-@media (max-width: 993px) {
-    .btn-default.hire-me
-    {
-        margin: 20px 0 0 20px !important;
-    }
-    .socia-icons .btn
-    {
-        margin-right: 0 !important;
-        margin-left: 20px !important;
-    }
-    .my-name, .my-title 
-    {
-        margin-left: 25px !important;   
-    }
-}
+
 #grid .mix .thumbnail {
     border: 2px thin #F7F7F7;
     padding: 0;
     border-radius: 0;
-}
-
-/* 
- * This is a media query for a blue hover effect.
- * In order to achieve a nice blue hover effect we need to have opacity .1 for .overlayblue
- * with a blue colour, and opacity .8 for the regular .overlay hover with no background colour
- * in the regular .overlay hover otherwise it will overwrite our blue colour.
- * We can either have the background colour in .overlay or .overlayblue but NOT both, 
- * and we get a slightly darker blue if we put the background colour in .overlayblue.
- * We must put only class overlayblue on the img tag and only class overlay on the div tag that 
- * contains the img tag. 
- */
-@media (min-width: 993px) {
-    .overlayblue:hover {
-        background: #4ea6e0;
-        opacity: .1;
-    }
-    #grid .mix .overlay:hover {
-    opacity: .8;
-    }
 }
 
 #grid .mix .overlay i {
@@ -413,13 +450,13 @@ label.valid {
     border: solid thin #fff;
     padding: 3px 5px;
 }
-.help-block ul{
+.help-block ul {
       list-style: none;
       margin: 0;
       padding: 0;
 }
 
-.help-block ul li{
+.help-block ul li {
  background: #b94a48;
   color: #fff;
   padding: 4px 18px;
@@ -427,14 +464,7 @@ label.valid {
 /* ==========================================================================
    Social icons
    ========================================================================== */
-@media (min-width: 994px) {
-    .socia-icons .btn {
-        /* Should be 15px for more than 2 icons. */
-        margin-right: 10px;
-        /* Need to remove this if adding more than 2 icons. */
-        margin-left: 10px;
-    }
-}
+
 
 .socia-icons {
     padding-top: 10px;
@@ -518,39 +548,7 @@ label.valid {
     margin-right: auto;
     float: none;
 }
-/* ==========================================================================
-   Responsive Settings
-   ========================================================================== */
 
-@media(max-width:993px) {
-    #page-profile .profile {
-        margin: 0 auto 20px auto;
-    }
-}
-@media (max-width: 479px) {
-    #page-welcome header h1 {
-        font-size: 2em;
-    }
-    #page-welcome header p {
-        font-size: 1em;
-        line-height: 3em;
-    }
-    .section-title {
-        font-size: 1.5em;
-    }
-    .section-header p {
-        font-size: 1.2em;
-    }
-    #page-skills {
-        text-align: center;
-    }
-    #grid {
-        text-align: center;
-    }
-    #page-profile .profile {
-        margin: 0 auto 20px auto;
-    }
-}
 /* ======================================
    Blue 
    ====================================== */
@@ -560,37 +558,29 @@ label.valid {
 a:link,a:visited,.navbar-default .navbar-nav>li>a:hover, 
 .navbar-default .navbar-nav>li>a:focus,a:hover,a:active,.navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav>.active>a:focus{
+.navbar-default .navbar-nav>.active>a:focus {
     color:#3498db;
 }
 
 spacer,.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
 background: #3498db;
 }
-/* 
- * This media query prevents portfolio images from having blue background padding when in  
- * mobile mode. 
- */
-@media (min-width: 993px) {
-    #grid .mix .overlay{
-        background: #3498db;
-    }
-}
 
-#page-contact{
+
+#page-contact {
     background: #3498db;
     color:#fff;
 }
 
-#page-contact .spacer{
-  /*  background: #fff; */
+#page-contact .spacer {
+   /* background: #fff;*/
 }
 
-#page-contact .section-title{
+#page-contact .section-title {
     color:#fff;
 }
 
 .btn.btn-default:hover,
-.btn.btn-default:active{
+.btn.btn-default:active {
     color:#3498db;
 }
