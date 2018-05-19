@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //Set default string length to 191 to allow MySQL versions older than 5.7.7 on Windows to create indexes for migrations.
+        Schema::defaultStringLength(191);
     }
 
     /**
