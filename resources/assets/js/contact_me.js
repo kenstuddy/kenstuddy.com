@@ -31,12 +31,6 @@ $(function() {
 						.append("<strong>Your message has been sent. </strong>");
 						$("#success > .alert-success")
 						.append("</div>");
-						//$("#success").html("<div class='alert alert-danger'>");
-						//$("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-						//.append( "</button>");
-						//$("#success > .alert-danger").append("<strong>Sorry "+firstName+", it seems that my mail server is not responding...</strong> Please feel free to email me directly at <a href='mailto:kenstuddy@gmail.com?Subject=Message_Me from kenstuddy.com'>kenstuddy@gmail.com</a> ? Sorry for the inconvenience! Here is a copy of the message you tried to send: <br/>");
-						//$("#success > .alert-danger").append("<pre>"+message+"</pre>");
-						//$("#success > .alert-danger").append("</div>");
 						//clear all fields
 						$("#contactForm").trigger("reset");
 					},
