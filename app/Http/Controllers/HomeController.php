@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Education;
 use App\Experience;
 use App\Portfolio;
-Use App\Page;
+use App\Page;
 
 class HomeController extends Controller
 {
