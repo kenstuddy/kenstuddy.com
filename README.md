@@ -37,7 +37,7 @@ Run composer to install any PHP dependencies
 composer install
 ```
 
-Run npm to install any JavaScript Dependencies
+Run npm to install any JavaScript dependencies
 
 ```
 npm install
