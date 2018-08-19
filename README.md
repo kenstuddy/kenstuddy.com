@@ -21,34 +21,50 @@ https://github.com/kenstuddy/Deploy-Laravel
 
 Clone the repository
 
-```git clone https://github.com/kenstuddy/kenstuddy.com```
+```
+git clone https://github.com/kenstuddy/kenstuddy.com
+```
 
 Change to the repository directory
 
-```cd kenstuddy.com```
+```
+cd kenstuddy.com
+```
 
 Run composer to install any PHP dependencies
 
-```composer install```
+```
+composer install
+```
 
 Run npm to install any JavaScript Dependencies
 
-```npm install```
+```
+npm install
+```
 
 Build the CSS and JS assets with npm
 
-```npm run dev```
+```
+npm run dev
+```
 
 After that, you need to create your .env file and enter your database credentials
 
-```mv .env.example .env```
+```
+mv .env.example .env
+```
 
 Run the database migrations to create the database schema 
 
-```php artisan migrate```
+```
+php artisan migrate
+```
 
 If you have correctly set up your .env file, you should now be able to start the Laravel development server
 
-```php artisan serve```
+```
+php artisan serve
+```
 
 Visit the IP address (usually 127.0.0.1) http://127.0.0.1:8000 in your web browser.
