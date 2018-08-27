@@ -13,7 +13,7 @@
                     <div>
                     <header class="centered">
                         <h1 class="my-name">Ken Studdy</h1>
-                        <p class="my-title">FULL STACK WEB DEVELOPER</p>
+                        <p class="my-title">Full Stack Web Developer</p>
                     </header>
                     <div class="socia-icons">
                         <a href="https://www.linkedin.com/in/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
@@ -98,17 +98,18 @@
         </section>
         <section id="page-portfolio" class="page-portfolio">
             <div class="container">
-                    <div>
+                <div>
                     <header class="section-header">
                         <h2 class="section-title"><span>Portfolio</span></h2>
                         <div class="spacer"></div>
-                        <p class="section-subtitle">Here are some of my past works. </p>
+                        <p class="section-subtitle"></p>
                     </header>
                     <div id="grid" class="grid-wrapper">
                         @foreach ($portfolios as $portfolio)
-                            <div class="mix col-xs-12 col-sm-12 col-md-3 col-md-3"><a class="" href="img/portfolio/large/{{ $portfolio->name }}.jpg">
-                                <div class="overlay"><img src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="img-responsive center-block overlayblue" alt="My image" /></div>
-                            </a>
+                            <div class="mix col-xs-12 col-sm-12 col-md-3 col-md-3">
+                                <a class="" href="img/portfolio/large/{{ $portfolio->name }}.jpg">
+                                    <div class="overlay"><img src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="img-responsive center-block overlayblue" alt="My image" /></div>
+                                </a>
                             </div>
                        @endforeach
                     </div>
