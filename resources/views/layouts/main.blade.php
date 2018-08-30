@@ -18,7 +18,6 @@
                     <div class="socia-icons">
                         <a href="https://www.linkedin.com/in/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
                         <a href="https://github.com/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
-
                     </div>
                     <a href="#page-contact" class="btn btn-default hire-me">Contact Me</a>
                 </div>
@@ -88,8 +87,7 @@
                                         <p>{{ $experience->company }} / {{ $experience->location }} / {{ $experience->string_year }}</p>
                                     @endif
                                 </header>
-                                <p>{{ $experience->description }}
-                                </p>
+                                <p>{{ $experience->description }}</p>
                             </article>
                         </div>
                     @endforeach
