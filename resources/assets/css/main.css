@@ -1,6 +1,6 @@
 /* Media query for fixing social buttons in mobile size and adding padding to portfolio images. */
 @media (max-width: 993px) {
-    .btn-default.contact-me {
+    .btn-secondary.contact-me {
         margin: 0 0 0 0 !important;
     }
     .socia-icons .btn {
@@ -43,7 +43,7 @@
         background: #3498db;
     }
     .centered {
-        margin-top: 0;
+        margin-top: 50px;
     }
     .socia-icons .btn {
         /* Should be 15px for more than 2 icons. */
@@ -51,7 +51,7 @@
         /* Need to remove this if adding more than 2 icons. */
         margin-left: 10px;
     }
-    .btn-default.contact-me {
+    .btn-secondary.contact-me {
         margin: 0 0 0 0 !important;
     }
 }
@@ -107,6 +107,8 @@ html, body {
     width: 100%;
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     color: #757575;
+    line-height: 1.42857143;
+    font-size: 14px;
 }
 img {
     max-width: 100%;
@@ -131,30 +133,28 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     width: 100%;
 }
-.navbar-default {
+.navbar-toggler:active, .navbar-toggler:hover, .navbar-toggler:focus {
+    background-color: #bdbdbd;
+    outline-width: 0;
+}
+.navbar-light {
     background: rgba(255, 255, 255, 0.85);
-    border: none;
-    color: #777;
+    border: #bdbdbd;
     text-transform: uppercase;
-    display: inline-block;
     text-align: center;
     position: fixed;
+    z-index: 1000;
 }
 .navbar-nav {
     margin: 0 auto;
-    padding: 0;
+    padding: 3px;
     list-style: none;
     display: inline-block;
     float: none;
     font-size: 1em;
     font-weight: bold;
 }
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    background-color: transparent;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    background: none;
-}
+
 /* ==========================================================================
   Layout 
    ========================================================================== */
@@ -318,6 +318,9 @@ h1, h2, h3, h4, h5, h6 {
     
     z-index: -2;
 }
+#vegas-prev, #vegas-next {
+    margin-top: 40px;
+}
 .vegas-overlay, .vegas-background {
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -325,6 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     -ms-user-select: none;
     user-select: none;
 }
+
 .slider-controls {
     opacity: 0;
     padding: 0;
@@ -404,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-shadow: none;
     border: none;
 }
-.btn.btn-default {
+.btn.btn-secondary {
     margin: 40px auto 0;
     background: transparent;
     position: relative;
@@ -425,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-.btn.btn-default:hover, .btn.btn-default:active {
+.btn.btn-secondary:hover, .btn.btn-secondary:active {
     background: #fff;
     border-color: #fff;
     color: fff;
@@ -558,19 +562,24 @@ label.valid {
    ====================================== */
    /* Blue - #3498db */
 
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>li>a:focus {
-    color: #777;
-}
-a:link,a:visited,.navbar-default .navbar-nav>li>a:hover, 
-a:hover,a:active, 
-.navbar-default .navbar-nav>.active>a:hover {
+
+.navbar-light .navbar-nav.nav-link>li>a:hover,a:hover, 
+.navbar-light .navbar-nav.nav-link>.active>a:hover, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav .active > .nav-link:hover, a:hover {
     color: #3498db;
 }
 
-spacer,.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-background: #3498db;
+.navbar-light .navbar-nav .show > .nav-link, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link:active,
+.navbar-light .navbar-nav .nav-link:focus {
+    background: none;
+    color: #777;
+}
+
+spacer,.nav-pills>li.active>a:hover {
+    background: #3498db;
 }
 
 
@@ -587,7 +596,7 @@ background: #3498db;
     color:#fff;
 }
 
-.btn.btn-default:hover,
-.btn.btn-default:active {
+.btn.btn-secondary:hover,
+.btn.btn-secondary:active {
     color:#3498db;
 }

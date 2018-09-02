@@ -6,12 +6,12 @@
             <p class="section-subtitle">Feel free to contact me any time of day and I'll get back to you as soon as I can.</p>
         </header>
         <div class="row">
-            <div class="col-sm-5 contact-info">
+            <div class="col-md-5 contact-info">
                 <h3>Contact Info</h3>
                 <p><i class="fa fa-envelope-o"></i> kenstuddy@gmail.com</p>
             </div>
 
-            <div class="col-sm-7">
+            <div class="col-md-7">
                 <h3>Get in Touch</h3>
                 <form class="form-horizontal" id="contactForm" novalidate>
                     <div class="control-group">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-actions">
                     <div id="success"></div>
-                        <button type="submit" class="btn btn-default btn-lg btn-block">Submit Message</button>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit Message</button>
                     </div>
                 </form>
             </div>
