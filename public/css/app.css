@@ -10528,7 +10528,7 @@ body.vegas-container {
 
 /* Media query for fixing social buttons in mobile size and adding padding to portfolio images. */
 @media (max-width: 993px) {
-    .btn-default.hire-me {
+    .btn-default.contact-me {
         margin: 0 0 0 0 !important;
     }
     .socia-icons .btn {
@@ -10539,10 +10539,14 @@ body.vegas-container {
         padding: 20px;
     }
     .centered {
-        margin-top: 200px;
+        margin-top: 0; 
     }
     #page-profile .profile {
         margin: 0 auto 20px auto;
+    }
+    .mobile-img {
+        width: 300px;
+        height: 220px;
     }
 }
 
@@ -10567,7 +10571,7 @@ body.vegas-container {
         background: #3498db;
     }
     .centered {
-        margin-top: -100px;
+        margin-top: 0;
     }
     .socia-icons .btn {
         /* Should be 15px for more than 2 icons. */
@@ -10575,7 +10579,7 @@ body.vegas-container {
         /* Need to remove this if adding more than 2 icons. */
         margin-left: 10px;
     }
-    .btn-default.hire-me {
+    .btn-default.contact-me {
         margin: 0 0 0 0 !important;
     }
 }
@@ -11082,12 +11086,15 @@ label.valid {
    ====================================== */
    /* Blue - #3498db */
 
-
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #777;
+}
 a:link,a:visited,.navbar-default .navbar-nav>li>a:hover, 
-.navbar-default .navbar-nav>li>a:focus,a:hover,a:active,.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav>.active>a:focus {
-    color:#3498db;
+a:hover,a:active, 
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #3498db;
 }
 
 spacer,.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {

@@ -106,7 +106,7 @@
                         @foreach ($portfolios as $portfolio)
                             <div class="mix col-xs-12 col-sm-12 col-md-3 col-md-3">
                                 <a class="" href="img/portfolio/large/{{ $portfolio->name }}.jpg">
-                                    <div class="overlay"><img src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="img-responsive center-block overlayblue" alt="My image" /></div>
+                                    <div class="overlay"><img src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="mobile-img img-responsive center-block overlayblue" alt="My image" /></div>
                                 </a>
                             </div>
                        @endforeach
