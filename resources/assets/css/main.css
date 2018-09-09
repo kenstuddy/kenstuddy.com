@@ -1,6 +1,58 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+body {
+    overflow-anchor: none;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    color: #757575;
+    line-height: 1.42857143;
+    font-size: 14px;
+}
+img {
+    max-width: 100%;
+}
+a:link, a:visited {
+    outline: 0;
+}
+a:hover, a:active {
+    text-decoration: none;
+}
+a img {
+    border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Social Icon Fixes
+   ========================================================================== */
+
+.my-fa-linkedin:before {
+    content: "\f0e1";
+}
+.my-fa-linkedin-square:before {
+    content: "\f08c";
+}
+.my-fa-github:before {
+    content: "\f09b";
+}
+.my-fa-github-square:before {
+    content: "\f092";
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
 /* Media query for fixing social buttons in mobile size and adding padding to portfolio images. */
 @media (max-width: 993px) {
-    .btn-secondary.contact-me {
+    .btn-contact.contact-me {
         margin: 0 0 0 0 !important;
     }
     .socia-icons .btn {
@@ -11,7 +63,7 @@
         padding: 20px;
     }
     .centered {
-        margin-top: 0; 
+        margin-top: 0;
     }
     #page-profile .profile {
         margin: 0 auto 20px auto;
@@ -26,17 +78,17 @@
     }
 }
 
-/* 
+/*
  * In order to achieve a nice blue hover effect we need to have opacity .1 for .overlayblue
  * with a blue colour, and opacity .8 for the regular .overlay hover with no background colour
  * in the regular .overlay hover otherwise it will overwrite our blue colour.
- * We can either have the background colour in .overlay or .overlayblue but NOT both, 
+ * We can either have the background colour in .overlay or .overlayblue but NOT both,
  * and we get a slightly darker blue if we put the background colour in .overlayblue.
- * We must put only class overlayblue on the img tag and only class overlay on the div tag that 
- * contains the img tag. 
+ * We must put only class overlayblue on the img tag and only class overlay on the div tag that
+ * contains the img tag.
  */
 @media (min-width: 993px) {
-   .overlayblue:hover {
+    .overlayblue:hover {
         background: #4ea6e0;
         opacity: .1;
     }
@@ -55,11 +107,11 @@
         /* Need to remove this if adding more than 2 icons. */
         margin-left: 10px;
     }
-    .btn-secondary.contact-me {
+    .btn-contact.contact-me {
         margin: 0 0 0 0 !important;
     }
     .center-intro {
-        height:111vh; 
+        height:111vh;
         position: relative;
     }
 }
@@ -87,9 +139,11 @@
         margin: 0 auto 20px auto;
     }
 }
-body {
-    overflow-anchor: none;
-}
+
+/* ==========================================================================
+   Carousel Slider
+   ========================================================================== */
+
 .slide {
     position: absolute;
     top: 0;
@@ -98,8 +152,7 @@ body {
     width: 100%;
     height: 110vh;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: no-repeat center center;
     transition: all 1s ease;
 }
 .fadeOut {
@@ -127,15 +180,6 @@ body {
     background-position: center;
 }
 
-.navbar-static-top {
-    margin-bottom: 19px;
-}
-#navbar-toggle-cbox:checked ~ .collapse {
-    display: block;
-}
-#navbar-toggle-cbox {
-    display: none
-}
 .arrow {
     position:absolute;
     top:0;
@@ -163,56 +207,19 @@ body {
     color: #ffffff;
 }
 
-
-/* ==========================================================================
-   Social Icon Fixes
-   ========================================================================== */
-
-.my-fa-linkedin:before {
-    content: "\f0e1";
-} 
-.my-fa-linkedin-square:before {
-    content: "\f08c";
-}
-.my-fa-github:before {
-    content: "\f09b";
-}
-.my-fa-github-square:before {
-    content: "\f092";
-}
-
-/* ==========================================================================
-   Base styles
-   ========================================================================== */
-
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    color: #757575;
-    line-height: 1.42857143;
-    font-size: 14px;
-}
-img {
-    max-width: 100%;
-}
-a:link, a:visited {
-    outline: 0;
-}
-a:hover, a:active {
-    text-decoration: none;
-}
-a img {
-    border: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 700;
-}
 /* ==========================================================================
    Navigation
    ========================================================================== */
 
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block;
+}
+#navbar-toggle-cbox {
+    display: none
+}
 .navbar {
     width: 100%;
 }
@@ -238,8 +245,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     font-weight: bold;
 }
+#navbar-toggle-label {
+    margin: 7px 0 7px 0;
+}
+
 /* ==========================================================================
-  Layout 
+   Layout
    ========================================================================== */
 
 #page-welcome {
@@ -420,8 +431,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 15px;
     padding: 15px;
 }
+#contact_form .text-danger {
+    margin-top: 4px;
+}
 
-.btn.btn-secondary {
+.btn.btn-contact {
     margin: 40px auto 0;
     background: transparent;
     position: relative;
@@ -442,10 +456,10 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
-.btn.btn-secondary:hover, .btn.btn-secondary:active {
+.btn.btn-contact:hover, .btn.btn-contact:active {
     background: #fff;
     border-color: #fff;
-    color: fff;
+    color: #fff;
 }
 input, .input-lg, button {
     border-radius: 0;
@@ -607,8 +621,10 @@ spacer,.nav-pills>li.active>a:hover {
 #page-contact .section-title {
     color:#fff;
 }
-
-.btn.btn-secondary:hover,
-.btn.btn-secondary:active {
+#page-contact .fa-envelope-o {
+    margin-right: 3px;
+}
+.btn.btn-contact:hover,
+.btn.btn-contact:active {
     color:#3498db;
 }

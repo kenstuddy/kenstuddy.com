@@ -33,7 +33,7 @@
                         <span>{{ success }}</span>
                     </div>
                     <div class="control-group">
-                        <button type="submit" class="btn btn-secondary btn-block btn-lg" :disabled="submitted">{{ submitText }}</button>
+                        <button type="submit" class="btn btn-contact btn-block btn-lg" :disabled="submitted">{{ submitText }}</button>
                     </div>
                 </form>
             </div>

@@ -8708,7 +8708,7 @@ var staticRenderFns = [
       _c(
         "a",
         {
-          staticClass: "btn btn-secondary contact-me",
+          staticClass: "btn btn-contact contact-me",
           attrs: { href: "#page-contact" }
         },
         [_vm._v("Contact Me")]
@@ -9135,7 +9135,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-secondary btn-block btn-lg",
+                  staticClass: "btn btn-contact btn-block btn-lg",
                   attrs: { type: "submit", disabled: _vm.submitted }
                 },
                 [_vm._v(_vm._s(_vm.submitText))]
