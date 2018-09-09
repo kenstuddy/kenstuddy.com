@@ -1,5 +1,5 @@
 # kenstuddy.com
-My personal website. Created in 2018. Uses PHP with Laravel, MySQL, JavaScript, HTML5, and CSS3. Visit https://kenstuddy.com to see a live demo of this project.
+My personal website. Created in 2018. Uses PHP with Laravel, MySQL, JavaScript with VueJS (converted from jQuery), HTML5, and CSS3. Visit https://kenstuddy.com to see a live demo of this project. 
 
 # Requirements
 * PHP >= 7.0.0
