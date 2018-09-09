@@ -11531,6 +11531,8 @@ body {
     width: 100%;
     height: 110vh;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     transition: all 1s ease;
 }
 .fadeOut {
@@ -11848,6 +11850,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
 }
 #contact_form .alert-success {
+    margin-top: 15px;
     padding: 15px;
 }
 

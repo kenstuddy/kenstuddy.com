@@ -98,6 +98,8 @@ body {
     width: 100%;
     height: 110vh;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     transition: all 1s ease;
 }
 .fadeOut {

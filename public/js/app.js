@@ -8855,7 +8855,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.submitText = "Submitted Message.";
                     _this.success = response.data.message;
                     //Reset the form using the asynchronous setTimeout method, if we use parenthesis for the resetContact method it will immediately invoke the method instead of waiting the 4000 millisecond (4 second) timer duration, which is not what we want.
-                    //setTimeout(this.resetContact, 4000);
+                    setTimeout(_this.resetContact, 4000);
                 }).catch(function (error) {
                     _this.errors = error.response.data.errors;
                     _this.submitText = "Submit Message";
