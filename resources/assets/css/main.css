@@ -20,6 +20,10 @@
         width: 300px;
         height: 220px;
     }
+    .center-intro {
+        height:100vh;
+        position: relative;
+    }
 }
 
 /* 
@@ -37,13 +41,13 @@
         opacity: .1;
     }
     #grid .mix .overlay:hover {
-    opacity: .8;
+        opacity: .8;
     }
     #grid .mix .overlay {
         background: #3498db;
     }
     .centered {
-        margin-top: 50px;
+        margin-top: -100px;
     }
     .socia-icons .btn {
         /* Should be 15px for more than 2 icons. */
@@ -54,8 +58,11 @@
     .btn-secondary.contact-me {
         margin: 0 0 0 0 !important;
     }
+    .center-intro {
+        height:111vh; 
+        position: relative;
+    }
 }
-
 @media (max-width: 479px) {
     #page-welcome header h1 {
         font-size: 2em;
@@ -80,13 +87,87 @@
         margin: 0 auto 20px auto;
     }
 }
+body {
+    overflow-anchor: none;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+    transition: all 1s ease;
+}
+.fadeOut {
+    opacity: 0;
+}
+.cachedImages {
+    display: none;
+}
+.carousel-wrapper {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: -20px;
+    opacity: 0;
+    transition: all 1.2s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block;
+}
+#navbar-toggle-cbox {
+    display: none
+}
+.arrow {
+    position:absolute;
+    top:0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    opacity: 0.3;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: url("/img/arrow.png") 50% 50% / 80px no-repeat;
+}
+.arrow:hover {
+    opacity: 1;
+}
+.arrow-prev {
+    left: 0;
+    margin-left: 70px;
+}
+.arrow-next {
+    right: 0;
+    margin-right: 70px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.light {
+    color: #ffffff;
+}
+
 
 /* ==========================================================================
    Social Icon Fixes
    ========================================================================== */
 
 .my-fa-linkedin:before {
-  content: "\f0e1";
+    content: "\f0e1";
 } 
 .my-fa-linkedin-square:before {
     content: "\f08c";
@@ -95,7 +176,7 @@
     content: "\f09b";
 }
 .my-fa-github-square:before {
-  content: "\f092";
+    content: "\f092";
 }
 
 /* ==========================================================================
@@ -133,7 +214,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     width: 100%;
 }
-.navbar-toggler:active, .navbar-toggler:hover, .navbar-toggler:focus {
+
+.navbar-toggler:hover {
     background-color: #bdbdbd;
     outline-width: 0;
 }
@@ -154,7 +236,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     font-weight: bold;
 }
-
 /* ==========================================================================
   Layout 
    ========================================================================== */
@@ -289,88 +370,7 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition-duration: 0s;
     transition-duration: 0s;
 }
-/* ==========================================================================
-   Vegas slider
-   ========================================================================== */
 
-.vegas-loading {
-    border-radius: 10px;
-    background: #000;
-    background: rgba(0, 0, 0, 0.7);
-    background: url(../img/loading.gif) no-repeat center center;
-    height: 32px;
-    left: 20px;
-    position: fixed;
-    top: 20px;
-    width: 32px;
-    z-index: 0;
-}
-.vegas-overlay {
-    background: transparent url(../img/overlays/16.png);
-    opacity: 0.5;
-    
-}
-.vegas-background {
-    -ms-interpolation-mode: bicubic;
-    image-rendering: optimizeQuality;
-    max-width: none !important;
-    /* Overrides global img modification by Bootstrap library. */
-    
-    z-index: -2;
-}
-#vegas-prev, #vegas-next {
-    margin-top: 40px;
-}
-.vegas-overlay, .vegas-background {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.slider-controls {
-    opacity: 0;
-    padding: 0;
-    margin: 0;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.slider-controls li {
-    list-style: none;
-}
-#page-welcome:hover .slider-controls {
-    opacity: 1;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.slider-controls li a {
-    position: absolute;
-    z-index: 10;
-    top: 40%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
-.next {
-    background: url("../img/next.png");
-    margin-right: 70px;
-    right: 0;
-    opacity: 0.3;
-}
-.prev {
-    background: url("../img/prev.png");
-    margin-left: 70px;
-    left: 0;
-    opacity: 0.3;
-}
-.next:hover, .prev:hover {
-    opacity: 1;
-}
 /* ==========================================================================
    Dividers
    ========================================================================== */
@@ -402,12 +402,23 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Forms
    ========================================================================== */
-
+.control-group {
+    margin-top: 10px;
+}
 .form-control {
     box-shadow: none;
     -webkit-box-shadow: none;
     border: none;
 }
+#contact_form .form-control {
+    /* Remove Bootstrap's border-radius of 0.25 rem */
+    border-radius: 0;
+}
+#contact_form .alert-success {
+    margin-top: 15px;
+    padding: 15px;
+}
+
 .btn.btn-secondary {
     margin: 40px auto 0;
     background: transparent;
@@ -561,7 +572,6 @@ label.valid {
    Blue 
    ====================================== */
    /* Blue - #3498db */
-
 
 .navbar-light .navbar-nav.nav-link>li>a:hover,a:hover, 
 .navbar-light .navbar-nav.nav-link>.active>a:hover, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav>li>a:hover, .navbar-light .navbar-nav .active > .nav-link:hover, a:hover {
