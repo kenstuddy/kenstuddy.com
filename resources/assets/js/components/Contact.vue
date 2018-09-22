@@ -52,7 +52,8 @@
                 success: "", //This is the success response message from the API.
                 message: "", //Form message.
                 form: true, //The form is visible when this is true because of v-show in the form tag.
-                submitText: "Submit Message" //This is the text of the submit button.
+                submitText: "Submit Message", //This is the text of the submit button.
+                resetContactTime: 4000 //This is the time in ms for resetting the contact form after sending a message.
             };
         },
         methods: {
@@ -72,8 +73,8 @@
                             this.submitted = true;
                             this.submitText = "Submitted Message.";
                             this.success = response.data.message;
-                            //Reset the form using the asynchronous setTimeout method, if we use parenthesis for the resetContact method it will immediately invoke the method instead of waiting the 4000 millisecond (4 second) timer duration, which is not what we want.
-                            setTimeout(this.resetContact, 4000);
+                            //Reset the form using the asynchronous setTimeout method, if we use parenthesis for the resetContact method it will immediately invoke the method instead of waiting the duration of resetContactTime, which is not what we want.
+                            setTimeout(this.resetContact, this.resetContactTime);
                         }).catch((error) => {
                             this.errors = error.response.data.errors;
                             this.submitText = "Submit Message";
