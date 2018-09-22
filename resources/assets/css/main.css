@@ -428,7 +428,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0;
 }
 #contact_form .alert-success {
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 15px;
 }
 #contact_form .text-danger {
