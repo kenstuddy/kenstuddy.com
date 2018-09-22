@@ -53,7 +53,7 @@
                 message: "", //Form message.
                 form: true, //The form is visible when this is true because of v-show in the form tag.
                 submitText: "Submit Message", //This is the text of the submit button.
-                resetContactTime: 4000 //This is the time in ms for resetting the contact form after sending a message.
+                resetContactTime: 4000 //This is the time in ms to wait before resetting the contact form after sending a message.
             };
         },
         methods: {
