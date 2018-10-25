@@ -12,10 +12,12 @@ class Contact extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $contact;
+
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param Request $request
      */
     public function __construct(Request $request)
     {
@@ -29,7 +31,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        $this->view('emails.contact')->subject('Contact form submitted by: ' . $this->contact->name)->from($this->contact->email)->with('contact', $this->contact);
+        $this->view('emails.contact')->subject('Contact form submitted by: ' . $this->contact->name)->replyTo($this->contact->email)->from($this->contact->email)->with('contact', $this->contact);
         $response['message'] = 'Thank you for your message. I will get back to you as soon as possible.';
         echo json_encode($response);
     }
