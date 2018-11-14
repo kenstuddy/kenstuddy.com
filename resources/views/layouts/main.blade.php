@@ -23,17 +23,29 @@
                 <div class="spacer"></div>
                 <p class="section-subtitle"></p>
             </header>
-            <div class="row">@foreach ($educations as $education)
-                <div class="col-lg-6">
-                    <article class="education">
-                        <header>
-                             <h3>{{ $education->organization }}</h3>
-                            <p>{{ $education->credential }} - <strong>Graduated: </strong>{{ $education->year
-                                }}</p>
-                        </header>
-                        <p>{{ $education->description }}</p>
-                    </article>
-                </div>@endforeach</div>
+            <div class="row">
+                @foreach ($educations as $education)
+                    <div class="col-lg-6">
+                        <article class="education">
+                            <header>
+                                <h3>{{ $education->organization }}</h3>
+                                <p>{{ $education->credential }}
+                                    @if (is_null($education->string_year))
+                                        @if (is_null($education->start_year))
+                                            / {{ $education->end_year }}
+                                        @else
+                                            / {{ $education->start_year }} - {{ $education->end_year }}
+                                        @endif
+                                    @else
+                                       {!! html_entity_decode($education->string_year) !!}
+                                    @endif
+                                </p>
+                            </header>
+                            <p>{{ $education->description }}</p>
+                        </article>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </section>
     <section id="page-experience" class="page-experience">
@@ -43,22 +55,30 @@
                 <div class="spacer"></div>
                 <p class="section-subtitle"></p>
             </header>
-            <div class="row">@foreach ($experiences as $experience)
-                <div class="col-lg-4">
-                    <article class="experience">
-                        <header>
-                             <h3>{{ $experience->position }}</h3>
-                            @if (is_null($experience->string_year)) @if (is_null($experience->company))
-                            <p>{{ $experience->location }} / {{ $experience->start_year }} - {{
-                                $experience->end_year }}</p>@else
-                            <p>{{ $experience->company}} / {{ $experience->location }} / {{ $experience->start_year
-                                }} - {{ $experience->end_year }}</p>@endif @elseif (is_null($experience->company))
-                            <p>{{ $experience->location }} / {{ $experience->string_year }}</p>@else
-                            <p>{{ $experience->company }} / {{ $experience->location }} / {{ $experience->string_year
-                                }}</p>@endif</header>
-                        <p>{{ $experience->description }}</p>
-                    </article>
-                </div>@endforeach</div>
+            <div class="row">
+                @foreach ($experiences as $experience)
+                    <div class="col-lg-4">
+                        <article class="experience">
+                            <header>
+                                <h3>{{ $experience->position }}</h3>
+                                @if (is_null($experience->string_year))
+                                    @if (is_null($experience->company))
+                                        <p>{{ $experience->location }} / {{ $experience->start_year }} - {{
+                                            $experience->end_year }}</p>
+                                    @else
+                                        <p>{{ $experience->company }} / {{ $experience->location }} / {{ $experience->start_year }} - {{ $experience->end_year }}</p>
+                                    @endif
+                                @elseif (is_null($experience->company))
+                                    <p>{{ $experience->location }} / {!! html_entity_decode($experience->string_year) !!}</p>
+                                @else
+                                    <p>{{ $experience->company }} / {{ $experience->location }} / {!! html_entity_decode($experience->string_year) !!}</p>
+                                @endif
+                            </header>
+                            <p>{{ $experience->description }}</p>
+                        </article>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </section>
     <section id="page-portfolio" class="page-portfolio">
