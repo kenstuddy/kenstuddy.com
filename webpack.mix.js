@@ -15,9 +15,9 @@ mix.styles([
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/normalize.css/normalize.css',
     'node_modules/font-awesome/css/font-awesome.css',
-    'resources/assets/css/fonts.css',
-    'resources/assets/css/main.css'
+    'resources/css/fonts.css',
+    'resources/css/main.css'
 ], 'public/css/app.css')
    .js([
-    'resources/assets/js/app.js'
+    'resources/js/app.js'
 ], 'public/js/app.js').extract(['vue']);
