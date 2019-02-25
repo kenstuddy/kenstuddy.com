@@ -33,6 +33,7 @@
                 slideTimeout: null, //The ID of the slide timeout, assigned by the setTimeout method.
                 slideSpeed: 3000, //Automatic slide speed in ms.
                 slideDuration: 1000, //CSS transition speed in ms.
+                largeHeight: 1200, //The maximum height for regular size slider images.
                 images: [
                     "/img/slider/01.jpg",
                     "/img/slider/02.jpg",
@@ -42,6 +43,12 @@
             };
         },
         mounted() {
+            //If the screen height is larger than the large height, use the large size images.
+            if (window.screen.height > this.largeHeight) {
+                this.images = this.images.map((image) => {
+                    return image.replace('.jpg', '-large.jpg');
+                });
+            }
             //Add the first image to the beginning of the slides array.
             this.slides.unshift({
                 image: this.images[0],
