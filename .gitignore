@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/img/portfolio
+/public/css
+/public/js
 /public/secureconfigscripts
 /storage/*.key
 /vendor
