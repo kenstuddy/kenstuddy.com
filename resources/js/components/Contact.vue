@@ -3,7 +3,7 @@
         <header class="section-header">
             <h2 class="section-title"><span>Contact</span></h2>
             <div class="spacer"></div>
-            <p class="section-subtitle">Feel free to contact me any time of day and I'll get back to you as soon as I can.</p>
+            <p class="section-subtitle">Feel free to contact me any time of day and I'll respond to you as soon as I can.</p>
         </header>
         <div class="row">
             <div class="col-sm-5 contact-info">

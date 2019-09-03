@@ -3,10 +3,10 @@
 namespace Tests\Feature;
 
 use App\Education;
+use App\Portfolio;
 use App\Experience;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\Portfolio;
 
 class HomeControllerTest extends TestCase
 {

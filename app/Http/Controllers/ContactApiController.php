@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\Contact;
-use Illuminate\Http\Request;
-use Illuminate\Mail\Mailer;
 use Mail;
+use App\Mail\Contact;
+use Illuminate\Mail\Mailer;
+use Illuminate\Http\Request;
 
 class ContactApiController extends Controller
 {

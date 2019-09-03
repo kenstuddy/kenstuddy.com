@@ -2,11 +2,11 @@
 My personal website. Created in 2018. Uses PHP with Laravel, MySQL, JavaScript with Vue (converted from jQuery), HTML5, and CSS3. Visit https://kenstuddy.com to see a live demo of this project. 
 
 # Requirements
-* PHP >= 7.1.3
+* PHP >= 7.2.0
 * Node >= 6.0.0
 * MySQL >= 5.6.10
 * Composer
-* Additional [Laravel Server Requirements](https://laravel.com/docs/5.7/installation#server-requirements)
+* Additional [Laravel Server Requirements](https://laravel.com/docs/6.0/installation#server-requirements)
 
 # How to Install
 Note: It is recommended that you install LAMP and Laravel with my LAMP and Laravel install scripts to ensure that you have all of the requirements.
