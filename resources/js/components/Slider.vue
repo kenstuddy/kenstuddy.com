@@ -15,7 +15,7 @@
                 <a href="https://www.linkedin.com/in/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
                 <a href="https://github.com/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
             </div>
-            <a href="#page-contact" class="btn btn-contact contact-me">Contact Me</a>
+            <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll">Contact Me</a>
         </div>
         <a class="arrow arrow-prev" @click="previousSlide"></a>
         <a class="arrow arrow-next" @click="nextSlide"></a>
@@ -100,6 +100,10 @@
                 this.slideTimeout = setTimeout(() => {
                     this.nextSlide();
                 }, this.slideSpeed);
+            },
+            smoothScroll(id) {
+                //Scroll the HTML element into the view of the browser using smooth scrolling.
+                document.getElementById(id).scrollIntoView({behavior: "smooth"});
             }
         }
     };
