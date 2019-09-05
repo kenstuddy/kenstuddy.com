@@ -228,4 +228,10 @@ return [
 
     ],
 
+
+    /*
+     * This is the destination email address for the contact form API.
+     * You can change this in the ".env" file.
+     */
+    'destination_email' => env('DESTINATION_EMAIL')
 ];
