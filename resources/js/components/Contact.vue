@@ -3,15 +3,16 @@
         <header class="section-header">
             <h2 class="section-title"><span>Contact</span></h2>
             <div class="spacer"></div>
-            <p class="section-subtitle">Feel free to contact me any time of day and I'll respond to you as soon as I can.</p>
+            <p class="section-subtitle">{{ contact_subtitle }}</p>
         </header>
         <div class="row">
             <div class="col-sm-5 contact-info">
                 <h3>Contact Info</h3>
-                <p><i class="fa fa-envelope-o"></i>kenstuddy@gmail.com</p>
+                <p><i v-if="contact_email.length > 0" class="fa fa-envelope-o"></i>{{ contact_email }}</p>
+                <p><i v-if="contact_phone.length > 0" class="fa fa-phone"></i>{{ contact_phone }}</p>
             </div>
             <div class="col-sm-7">
-                <h3>Get in Touch</h3>
+                <h3>{{ contact_sentence }}</h3>
                 <form class="form-horizontal" @submit.prevent="submitContact()" id="contact_form" v-show="form">
                     <div class="control-group">
                         <label for="name" class="control-label">Name</label>
@@ -48,7 +49,14 @@
 <script>
     export default {
         name: "contact",
+        props: [
+            'contact_subtitle',
+            'contact_email',
+            'contact_phone',
+            'contact_sentence'
+        ],
         mounted() {
+            alert(contact_subtitle);
             const messages = {
               custom: {
                 email: {

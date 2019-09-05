@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
+use App\Home;
 use App\Page;
 use App\Education;
 use App\Portfolio;
 use App\Experience;
+use App\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +21,10 @@ class HomeController extends Controller
         $portfolios = Portfolio::all();
         //Here we could use the DB query builder as it provides slightly better performance, but Eloquent provides extra functionality.
         $page = Page::where('name', 'home')->first();
+        $slider = Slider::where('name', 'home')->first();
+        $contact = Contact::where('name', 'home')->first();
+        $home = Home::first();
 
-        return view('home', compact('educations', 'experiences', 'portfolios', 'page'));
+        return view('home', compact('educations', 'experiences', 'portfolios', 'page', 'slider', 'contact', 'home'));
     }
 }

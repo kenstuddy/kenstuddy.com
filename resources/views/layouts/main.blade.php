@@ -1,13 +1,13 @@
 <div id="app">    
     <section id="page-welcome" class="page-welcome">
-        <slider></slider>
+        <slider my_name="{{ $slider['my_name'] }}" my_title="{{ $slider['my_title'] }}" button_text="{{ $slider['button_text'] }}"></slider>
     </section>
     <section id="page-profile" class="page-profile">
         <div class="container">
             <header class="section-header">
-                <h2 class="section-title">Hello there</h2>
+                <h2 class="section-title">{{ $page['title'] }}</h2>
                 <div class="spacer"></div>
-                <p class="section-subtitle">Welcome to my website.</p>
+                <p class="section-subtitle">{{ $page['subtitle'] }}</p>
             </header>
             <div class="row">
                 <div class="col-lg-0"></div>
@@ -21,7 +21,7 @@
             <header class="section-header">
                  <h2 class="section-title"><span>Education</span></h2>
                 <div class="spacer"></div>
-                <p class="section-subtitle"></p>
+                <p class="section-subtitle">{{ $home['education_subtitle'] }}</p>
             </header>
             <div class="row">
                 @foreach ($educations as $education)
@@ -53,7 +53,7 @@
             <header class="section-header">
                  <h2 class="section-title"><span>Experience</span></h2>
                 <div class="spacer"></div>
-                <p class="section-subtitle"></p>
+                <p class="section-subtitle">{{ $home['experience_subtitle'] }}</p>
             </header>
             <div class="row">
                 @foreach ($experiences as $experience)
@@ -89,7 +89,7 @@
                             <span>Portfolio</span>
                         </h2>
                         <div class="spacer"></div>
-                        <p class="section-subtitle"></p>
+                        <p class="section-subtitle">{{ $home['portfolio_subtitle'] }}</p>
                     </header>
                 <div id="grid" class="row grid-wrapper">
                     @foreach ($portfolios as $portfolio)

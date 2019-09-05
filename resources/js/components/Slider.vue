@@ -8,14 +8,14 @@
 
         <div class="center-intro">
             <header class="centered">
-                <h1 class="my-name">Ken Studdy</h1>
-                <p class="my-title">Full Stack Web Developer</p>
+                <h1 class="my-name">{{ my_name }}</h1>
+                <p class="my-title">{{ my_title }}</p>
             </header>
             <div class="socia-icons">
                 <a href="https://www.linkedin.com/in/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
                 <a href="https://github.com/kenstuddy" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
             </div>
-            <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll">Contact Me</a>
+            <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll">{{ button_text }}</a>
         </div>
         <a class="arrow arrow-prev" @click="previousSlide"></a>
         <a class="arrow arrow-next" @click="nextSlide"></a>
@@ -25,6 +25,11 @@
 <script>
     export default {
         name: "slider",
+        props: [
+            'my_name',
+            'my_title',
+            'button_text'
+        ],
         data() {
             return {
                 currentIndex: 0, //This is the number of the current slide.
