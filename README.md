@@ -49,7 +49,7 @@ Build the CSS and JS assets with npm
 npm run dev
 ```
 
-After that, you need to create your .env file and enter your database credentials
+After that, you need to create your .env file and enter your database credentials and destination email address for the contact form
 
 ```
 mv .env.example .env
