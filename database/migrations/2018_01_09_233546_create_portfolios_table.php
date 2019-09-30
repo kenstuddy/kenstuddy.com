@@ -17,6 +17,7 @@ class CreatePortfoliosTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('alt_text');
+            $table->string('title');
             $table->timestamps();
         });
     }

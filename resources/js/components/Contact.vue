@@ -48,7 +48,7 @@
 
 <script>
     export default {
-        name: "contact",
+        name: 'contact',
         props: [
             'contact_subtitle',
             'contact_email',
@@ -56,7 +56,7 @@
             'contact_sentence'
         ],
         mounted() {
-            alert(contact_subtitle);
+            //This is where the custom error messages for the Contact component are defined.
             const messages = {
               custom: {
                 email: {
