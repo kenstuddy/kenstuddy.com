@@ -9,12 +9,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav flex-row ml-md-auto d-md-flex">
-                <li class="nav-item"><a href="#page-welcome" class="nav-link smooth-scroll">Home</a></li>
-                <li class="nav-item"><a href="#page-profile" class="nav-link smooth-scroll">Profile</a></li>
-                <li class="nav-item"><a href="#page-education" class="nav-link smooth-scroll">Education</a></li>
-                <li class="nav-item"><a href="#page-experience" class="nav-link smooth-scroll">Experience</a></li>
-                <li class="nav-item"><a href="#page-portfolio" class="nav-link smooth-scroll">Portfolio</a></li>
+                <li class="nav-item"><a href="/#page-welcome" class="nav-link smooth-scroll">Home</a></li>
+                <li class="nav-item"><a href="/#page-profile" class="nav-link smooth-scroll">Profile</a></li>
+                <li class="nav-item"><a href="/#page-education" class="nav-link smooth-scroll">Education</a></li>
+                <li class="nav-item"><a href="/#page-experience" class="nav-link smooth-scroll">Experience</a></li>
+                <li class="nav-item"><a href="/#page-portfolio" class="nav-link smooth-scroll">Portfolio</a></li>
                 <li class="nav-item"><a href="#page-contact" class="nav-link smooth-scroll">Contact</a></li>
+                @if(config("app.articles_enabled") === true)
+                    <li class="nav-item"><a href="/articles" class="nav-link">Articles</a></li>
+                @endif
             </ul>
         </div>
       </div>

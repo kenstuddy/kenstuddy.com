@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
-use App\Home;
+use App\Subtitle;
 use App\Page;
 use App\Education;
 use App\Portfolio;
@@ -23,8 +23,8 @@ class HomeController extends Controller
         $page = Page::where('name', 'home')->first();
         $slider = Slider::where('name', 'home')->first();
         $contact = Contact::where('name', 'home')->first();
-        $home = Home::first();
+        $subtitles = Subtitle::where('name', 'home')->first();
 
-        return view('home', compact('educations', 'experiences', 'portfolios', 'page', 'slider', 'contact', 'home'));
+        return view('home.index', compact('educations', 'experiences', 'portfolios', 'page', 'slider', 'contact', 'subtitles'));
     }
 }

@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Home extends Page
+class ArticlesText extends Model
 {
     //Override the default table name.
-    protected $table = 'home';
+    protected $table = 'articles_text';
 }

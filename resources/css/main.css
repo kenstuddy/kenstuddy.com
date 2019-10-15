@@ -638,3 +638,34 @@ spacer,.nav-pills>li.active>a:hover {
 .btn.btn-contact:active {
     color:#3498db;
 }
+
+.pagination {
+    justify-content: center !important;
+}
+.articles-top {
+    margin-top: 15px;
+}
+.article-title {
+    color: grey;
+}
+
+.article-profile {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .5;
+    margin-bottom: 10px;
+}
+
+.article-profile-image {
+    margin-top: -10px;
+    width: 70px;
+}
+
+code {
+    color: #212529;
+}
+
+.author-info {
+    margin-left: 10px;
+}
