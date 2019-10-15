@@ -18,7 +18,7 @@ class CreateSubtitlesTable extends Migration
             $table->string('name');
             $table->string('education_subtitle')->nullable();
             $table->string('experience_subtitle')->nullable();
-            $table->string('portfolios_subtitle')->nullable();
+            $table->string('portfolio_subtitle')->nullable();
             $table->string('article_subtitle')->nullable();
             $table->string('article_alternate_subtitle')->nullable();
             $table->string('articles_subtitle')->nullable();
