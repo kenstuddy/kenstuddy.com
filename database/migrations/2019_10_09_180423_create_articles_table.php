@@ -25,6 +25,7 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->boolean('published');
             $table->dateTime('published_at')->nullable();
+            $table->integer('views');
             $table->timestamps();
         });
     }

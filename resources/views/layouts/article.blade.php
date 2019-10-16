@@ -8,15 +8,15 @@
             <div class="col-lg-12">
                 <article class="article center-block text-center">
                     <header>
-                        <aside class="text-center flex-y-center article-profile">
+                        <aside class="text-center article-profile">
                             <div>
                                 <a href="/"><img class="rounded-circle article-profile-image" src="/img/{{ $article->image }}" title="{{ $article->author_name }}" alt="{{ $article->author_name }}"></a>
                             </div>
-                            <div class="p-xs-l-4 no-line-height text-sm text-left author-info">
-                                <h5 class="text-base m-xs-b-2">
+                            <div class="text-left author-info">
+                                <h5>
                                     {{ $article->author_name }}
                                 </h5>
-                                <div class="text-dark-muted">
+                                <div>
                                     <p>
                                       {{ $article->byline }}
                                     </p>

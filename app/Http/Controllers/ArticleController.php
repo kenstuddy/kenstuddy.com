@@ -36,7 +36,8 @@ class ArticleController extends Controller
         $contact = Contact::where('name', 'article')->first();
         $subtitles = Subtitle::where('name', 'articles')->first();
         $articlesText = ArticlesText::where('name','articles')->first();
-
+        $article->increment('views');
+        $article->save();
         return view('article.show', compact('article', 'page', 'contact', 'subtitles','articlesText'));
     }
 }
