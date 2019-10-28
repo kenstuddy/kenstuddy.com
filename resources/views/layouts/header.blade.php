@@ -8,5 +8,5 @@
     <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    @gitdown
+    @yield('css')
 </head>
