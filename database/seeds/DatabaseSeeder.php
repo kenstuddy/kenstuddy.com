@@ -11,8 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SlidersTableSeeder::class);
-        $this->call(EducationTableSeeder::class);
-        $this->call(ExperiencesTableSeeder::class);
+        //We should only run the seeders if this is a non-production environment.
+        if (App::environment(['local', 'staging'])) {
+            $this->call(SlidersTableSeeder::class);
+            $this->call(EducationTableSeeder::class);
+            $this->call(ExperiencesTableSeeder::class);
+            $this->call(PortfoliosTableSeeder::class);
+        }
     }
 }
