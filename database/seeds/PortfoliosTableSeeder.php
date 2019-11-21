@@ -10,7 +10,7 @@ class PortfoliosTableSeeder extends Seeder
     public function run()
     {
         $this->faker = Faker::create();
-        $portfolios = $this->faker->numberBetween(1,4);
+        $portfolios = $this->faker->numberBetween(2,4);
         for ($portfoliosCounter = 0; $portfoliosCounter < $portfolios; $portfoliosCounter++) {
             $name = $this->faker->word;
             $portfolio = new Portfolio();
