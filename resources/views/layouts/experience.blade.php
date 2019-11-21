@@ -7,7 +7,7 @@
         </header>
         <div class="row">
             @foreach ($experiences as $experience)
-                <div class="col-lg-4">
+                <div class="col-lg-{{ 12 / count($experiences)  }}">
                     <article class="experience">
                         <header>
                             <h3>{{ $experience->position }}</h3>
