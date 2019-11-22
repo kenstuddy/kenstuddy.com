@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
             $this->call(ExperiencesTableSeeder::class);
             $this->call(PortfoliosTableSeeder::class);
             $this->call(ContactsTableSeeder::class);
+            $this->call(ArticlesTextTableSeeder::class);
+            $this->call(ArticlesTableSeeder::class);
+            $this->call(PagesTableSeeder::class);
+            $this->call(SubtitlesTableSeeder::class);
         }
     }
 }

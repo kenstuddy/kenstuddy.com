@@ -23,9 +23,9 @@ class CreateArticlesTable extends Migration
             $table->string('subtitle');
             $table->string('description');
             $table->text('content');
-            $table->boolean('published');
+            $table->boolean('published')->default(0);
             $table->dateTime('published_at')->nullable();
-            $table->integer('views');
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

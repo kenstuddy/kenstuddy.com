@@ -11,7 +11,7 @@ class EducationTableSeeder extends Seeder
     {
         $this->faker = Faker::create();
         $graduationYear = $this->faker->numberBetween(2009, 2013);
-        $educations = $this->faker->numberBetween(1,2);
+        $educations = $this->faker->numberBetween(1, 2);
         $organizations = [
             "Durham College",
             "Humber College",
