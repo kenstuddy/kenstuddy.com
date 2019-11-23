@@ -7,4 +7,4 @@
 <meta name="author" content="">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
