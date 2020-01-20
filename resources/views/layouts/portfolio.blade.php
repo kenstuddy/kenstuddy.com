@@ -6,7 +6,9 @@
                         <span>Portfolio</span>
                     </h2>
                     <div class="spacer"></div>
-                    <p class="section-subtitle">{{ $subtitles['portfolio_subtitle'] }}</p>
+                    @isset($subtitles['portfolio_subtitle'])
+                        <p class="section-subtitle">{{ $subtitles['portfolio_subtitle'] }}</p>
+                    @endisset
                 </header>
             <div id="grid" class="row grid-wrapper">
                 @foreach ($portfolios as $portfolio)
