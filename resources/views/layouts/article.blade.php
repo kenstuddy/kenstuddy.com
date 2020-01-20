@@ -2,7 +2,9 @@
     <div class="container">
         <header class="section-header">
             <div class="spacer"></div>
-            <p class="section-subtitle">{{ $subtitles['article_subtitle'] }}</p>
+            @isset($subtitles['article_subtitle'])
+                <p class="section-subtitle">{{ $subtitles['article_subtitle'] }}</p>
+            @endisset
         </header>
         <div class="row">
             <div class="col-lg-12">
@@ -21,7 +23,7 @@
                                       {{ $article->byline }}
                                     </p>
                                     <p>
-                                      {{ $articlesText['article_posted_text'] }} {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
+                                      @if(!empty($articlesText['article_posted_text'])){{ $articlesText['article_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                                     </p>
                                 </div>
                             </div>
@@ -48,7 +50,9 @@
              <div class="col-lg-12">
                  <header class="section-header">
                     <div class="spacer"></div>
-                    <p class="section-subtitle">{{ $subtitles['article_alternate_subtitle'] }}</p>
+                    @isset($subtitles['article_alternate_subtitle'])
+                        <p class="section-subtitle">{{ $subtitles['article_alternate_subtitle'] }}</p>
+                    @endisset
                 </header>
                 <div class="row">
                     <div class="col-lg-12">

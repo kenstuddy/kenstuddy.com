@@ -2,7 +2,9 @@
     <div class="container">
         <header class="section-header">
             <div class="spacer"></div>
-            <p class="section-subtitle">{{ $subtitles['articles_subtitle'] }}</p>
+            @isset($subtitles['articles_subtitle'])
+                <p class="section-subtitle">{{ $subtitles['articles_subtitle'] }}</p>
+            @endisset
         </header>
         <div class="row">
             @foreach ($articles as $article)
@@ -13,9 +15,9 @@
                             <div class="col-lg-12">
                                 <p>{{ $article->subtitle }}</p>
                             </div>
-                            <p>{{ $articlesText['articles_posted_text'] }} {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
+                            <p>@if(!empty($articlesText['articles_posted_text'])){{ $articlesText['articles_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                             </p>
-                            <p><a href="/article/{{$article->slug}}">{{ $articlesText['article_link_text'] }}</a></p>
+                            <p><a href="/article/{{$article->slug}}">@if(!empty($articlesText['article_link_text'])){{ $articlesText['article_link_text'] }}@endif</a></p>
                         </header>
                     </article>
                 </div>
