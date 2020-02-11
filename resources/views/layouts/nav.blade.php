@@ -18,6 +18,7 @@
                 @if(config("app.articles_enabled") === true)
                     <li class="nav-item"><a href="/articles" class="nav-link">Articles</a></li>
                 @endif
+                <li class="nav-item"><a href="#" onClick="toggleDarkMode()" class="nav-link">Dark Mode</a></li>
             </ul>
         </div>
       </div>

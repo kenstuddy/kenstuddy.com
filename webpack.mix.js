@@ -18,6 +18,8 @@ mix.styles([
     'resources/css/fonts.css',
     'resources/css/main.css'
 ], 'public/css/app.css')
+   .scripts('node_modules/darkreader/darkreader.js','public/js/dark-mode.js')
+   .scripts('resources/js/darktoggle.js','public/js/dark-toggle.js')
    .js([
     'resources/js/main.js',
     'resources/js/app.js'
