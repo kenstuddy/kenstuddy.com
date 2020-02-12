@@ -12,8 +12,8 @@
                 <p class="my-title">{{ my_title }}</p>
             </header>
             <div class="socia-icons">
-                <a :href="primary_url" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
-                <a :href="secondary_url" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
+                <a :href="primary_url" aria-label="Primary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
+                <a :href="secondary_url" aria-label="Secondary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
             </div>
             <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll">{{ button_text }}</a>
         </div>
