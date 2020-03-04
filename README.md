@@ -61,6 +61,18 @@ Run the database migrations to create the database schema
 php artisan migrate
 ```
 
+Generate the application key
+
+```
+php artisan key:generate
+```
+
+Optionally, if you would like to see some testing data, you can run the seeder
+
+```
+php artisan db:seed
+```
+
 If you have correctly set up your .env file, you should now be able to start the Laravel development server
 
 ```
