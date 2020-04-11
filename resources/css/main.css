@@ -90,13 +90,14 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 993px) {
     .overlayblue:hover {
         background: #4ea6e0;
-        opacity: .1;
+        /*opacity: .1;*/
+        opacity: .5;
     }
     #grid .mix .overlay:hover {
         opacity: .8;
     }
     #grid .mix .overlay {
-        background: #3498db;
+        /*background: #3498db;*/
     }
     .centered {
         margin-top: -100px;

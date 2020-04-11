@@ -1,3 +1,3 @@
 <section id="page-contact" class="page-contact">
-    <contact contact_subtitle="{{ $contact['contact_subtitle'] }}" contact_email="{{ $contact['contact_email'] }}" contact_phone="{{ $contact['contact_phone'] }}" contact_sentence="{{ $contact['contact_sentence'] }}"></contact>
+    <contact contact_subtitle="@isset($contact['contact_subtitle']) {{ $contact['contact_subtitle'] }} @endisset" contact_email="@isset($contact['contact_email']) {{ $contact['contact_email'] }} @endisset" contact_phone="@isset($contact['contact_phone']) {{ $contact['contact_phone'] }} @endisset" contact_sentence="@isset($contact['contact_sentence']) {{ $contact['contact_sentence'] }} @endisset"></contact>
 </section>

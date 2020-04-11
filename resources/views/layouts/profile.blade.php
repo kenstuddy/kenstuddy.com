@@ -3,7 +3,7 @@
         <header class="section-header">
             <h2 class="section-title">{{ $page['title'] }}</h2>
             <div class="spacer"></div>
-            <p class="section-subtitle">{{ $page['subtitle'] }}</p>
+            <p class="section-subtitle">@isset($page['subtitle']) {{ $page['subtitle'] }} @endisset</p>
         </header>
         <div class="row">
             <div class="col-lg-0"></div>

@@ -3,9 +3,8 @@
         <header class="section-header">
              <h2 class="section-title"><span>Experience</span></h2>
             <div class="spacer"></div>
-            @isset($subtitles['experience_subtitle'])
-                <p class="section-subtitle">{{ $subtitles['experience_subtitle'] }}</p>
-            @endisset
+                <p class="section-subtitle">@isset($subtitles['experience_subtitle']) {{ $subtitles['experience_subtitle'] }} @endisset</p>
+
         </header>
         <div class="row">
             @foreach ($experiences as $experience)
