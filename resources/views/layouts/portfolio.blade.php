@@ -12,7 +12,7 @@
                 @foreach ($portfolios as $portfolio)
                     <div class="mix col-xs-12 col-sm-12 col-md-{{ 12 / count($portfolios) }} col-lg-{{ 12 / count($portfolios) }} col-lg-{{ 12 / count($portfolios) }}">
                         <div class="overlay text-center">
-                            <img v-img:group="{src: './img/portfolio/large/{{ $portfolio->name }}.jpg'}" src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="mobile-img img-fluid center-block mx-auto overlayblue" alt="{{ $portfolio->alt_text }}" title="{{ $portfolio->title }}">
+                            <img loading="lazy" v-img:group="{src: './img/portfolio/large/{{ $portfolio->name }}.jpg'}" src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="mobile-img img-fluid center-block mx-auto overlayblue" alt="{{ $portfolio->alt_text }}" title="{{ $portfolio->title }}">
                         </div>
                     </div>
                 @endforeach
