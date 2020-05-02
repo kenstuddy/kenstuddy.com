@@ -78,26 +78,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/*
- * In order to achieve a nice blue hover effect we need to have opacity .1 for .overlayblue
- * with a blue colour, and opacity .8 for the regular .overlay hover with no background colour
- * in the regular .overlay hover otherwise it will overwrite our blue colour.
- * We can either have the background colour in .overlay or .overlayblue but NOT both,
- * and we get a slightly darker blue if we put the background colour in .overlayblue.
- * We must put only class overlayblue on the img tag and only class overlay on the div tag that
- * contains the img tag.
- */
+
 @media (min-width: 993px) {
-    .overlayblue:hover {
-        background: #4ea6e0;
-        /*opacity: .1;*/
-        opacity: .5;
-    }
-    #grid .mix .overlay:hover {
-        opacity: .8;
-    }
     #grid .mix .overlay {
-        /*background: #3498db;*/
+        display: inline-block;
+        background: #3498db;
+    }
+
+    #grid .mix .overlay:hover .overlayblue {
+        opacity: .3;
     }
     .centered {
         margin-top: -100px;
