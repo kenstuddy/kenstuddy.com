@@ -3,7 +3,9 @@
     <head>
         @include('layouts.header')
         @extends('layouts.headermeta')
-        @section('title', $page['page_title'])
+        @section('title')
+            {{ $page['page_title'] }}
+        @endsection
     </head>
     <body>
         @include('layouts.nav')
