@@ -3,8 +3,10 @@
 namespace Tests\Feature;
 
 use App\Education;
+use App\Page;
 use App\Portfolio;
 use App\Experience;
+use App\Slider;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -12,14 +14,14 @@ class HomeControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function testIndex()
+    public function testIndex(): void
     {
         //Arrange.
         $education = factory(Education::class)->create();
-        $experience = factory(Experience::class)->create([
-            'string_year' => null,
-        ]);
+        $experience = factory(Experience::class)->create(['string_year' => null]);
         $portfolio = factory(Portfolio::class)->create();
+        factory(Page::class)->create(['name' => 'home']);
+        factory(Slider::class)->create(['name' => 'home']);
 
         //Act.
         $response = $this->get('/');
