@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\Article;
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Faker\Factory as Faker;
 
-use App\Article;
 class ArticlesTableSeeder extends Seeder
 {
     public function run()
@@ -12,7 +12,7 @@ class ArticlesTableSeeder extends Seeder
         $this->faker = Faker::create();
         $name = $this->faker->name;
         $byline = $this->faker->jobTitle;
-        $image = "default.jpg";
+        $image = 'default.jpg';
         $articles = $this->faker->numberBetween(1, 50);
         for ($articlesCounter = 0; $articlesCounter < $articles; $articlesCounter++) {
             $title = $this->faker->sentence;
@@ -21,7 +21,7 @@ class ArticlesTableSeeder extends Seeder
             $article->byline = $byline;
             $article->image = $image;
             $article->title = $title;
-            $article->slug = substr(str_replace(" ", "-", $title), 0 , -1);
+            $article->slug = substr(str_replace(' ', '-', $title), 0, -1);
             $article->subtitle = $this->faker->sentence;
             $article->description = $this->faker->sentence;
             $article->content = $this->faker->paragraphs($this->faker->numberBetween(1, 10), true);

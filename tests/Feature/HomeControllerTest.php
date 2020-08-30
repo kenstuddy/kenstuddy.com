@@ -2,13 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Education;
-use App\Page;
-use App\Portfolio;
-use App\Experience;
-use App\Slider;
-use Tests\TestCase;
+use App\Models\Education;
+use App\Models\Experience;
+use App\Models\Page;
+use App\Models\Portfolio;
+use App\Models\Slider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class HomeControllerTest extends TestCase
 {

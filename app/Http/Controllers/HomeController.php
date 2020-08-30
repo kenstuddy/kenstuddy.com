@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
-use App\Subtitle;
-use App\Page;
-use App\Education;
-use App\Portfolio;
-use App\Experience;
-use App\Slider;
+use App\Models\Contact;
+use App\Models\Education;
+use App\Models\Experience;
+use App\Models\Page;
+use App\Models\Portfolio;
+use App\Models\Slider;
+use App\Models\Subtitle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

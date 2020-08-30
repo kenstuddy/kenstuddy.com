@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\Experience;
 use Carbon\Carbon;
-use App\Experience;
 use Faker\Generator as Faker;
 
 $factory->define(Experience::class, function (Faker $faker) {

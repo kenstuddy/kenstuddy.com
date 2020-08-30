@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\Contact;
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Faker\Factory as Faker;
 
-use App\Contact;
 class ContactsTableSeeder extends Seeder
 {
     public function run()
@@ -12,9 +12,9 @@ class ContactsTableSeeder extends Seeder
         $this->faker = Faker::create();
         $email = $this->faker->email;
         $contactNames = [
-            "home",
-            "article",
-            "articles"
+            'home',
+            'article',
+            'articles',
         ];
         $contacts = 3;
         for ($contactsCounter = 0; $contactsCounter < $contacts; $contactsCounter++) {

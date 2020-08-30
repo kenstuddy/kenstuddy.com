@@ -1,6 +1,6 @@
 <?php
 
-use App\Portfolio;
+use App\Models\Portfolio;
 use Carbon\Carbon;
 use Faker\Generator as Faker;
 

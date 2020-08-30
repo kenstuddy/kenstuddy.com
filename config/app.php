@@ -227,7 +227,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-    
+
     /*
      * This is the destination email address for the contact form API.
      * You can change this in the ".env" file.
@@ -250,5 +250,5 @@ return [
      * This determines if the contact form on article feature is enabled.
      * You can change this in the ".env" file.
      */
-    'contact_form_on_article' => env('CONTACT_FORM_ON_ARTICLE')
+    'contact_form_on_article' => env('CONTACT_FORM_ON_ARTICLE'),
 ];
