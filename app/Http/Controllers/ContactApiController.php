@@ -11,10 +11,13 @@ class ContactApiController extends Controller
 {
     public function send(Request $request)
     {
+        $useReCaptcha = config('services.recaptcha.enabled');
+        $reCaptcha = $useReCaptcha ? 'required|recaptcha' : '';
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required',
+            'g-recaptcha-response' => $reCaptcha
         ]);
         //Retrieve the destination email address from the app configuration file which loads the value from the .env file.
         $destinationEmail = config('app.destination_email');

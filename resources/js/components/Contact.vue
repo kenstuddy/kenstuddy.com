@@ -37,6 +37,9 @@
                          <button type="button" class="close" @click="resetContact">×</button>
                         <span>{{ unsuccessful }}</span>
                     </div>
+                  <div v-if="use_recaptcha" data-size="invisible" id="g-recaptcha" class="g-recaptcha"
+                      :data-sitekey="datasite_key">
+                  </div>
                     <div class="control-group">
                         <button type="submit" class="btn btn-contact btn-block btn-lg" :disabled="submitted">{{ submitText }}</button>
                     </div>
@@ -53,7 +56,9 @@
             'contact_subtitle',
             'contact_email',
             'contact_phone',
-            'contact_sentence'
+            'contact_sentence',
+            'use_recaptcha',
+            'datasite_key'
         ],
         mounted() {
             //This is where the custom error messages for the Contact component are defined.
@@ -97,7 +102,8 @@
                         let data = {
                             "name": this.name,
                             "email": this.email,
-                            "message": this.message
+                            "message": this.message,
+                            "g-recaptcha-response": this.use_recaptcha ? document.getElementById("g-recaptcha-response").value : ""
                         };
                         //Send the HTTP POST API request to be handled by the Laravel ContactController send method. This also returns a Promise since it once again uses the then method.
                         axios.post("/api/contact/send", data)
@@ -116,6 +122,7 @@
                         this.submitText = "Submit Message";
                         this.submitted = false;
                     }
+
                 });
             },
             resetContact() {

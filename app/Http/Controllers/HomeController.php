@@ -24,7 +24,9 @@ class HomeController extends Controller
         $slider = Slider::where('name', 'home')->first();
         $contact = Contact::where('name', 'home')->first();
         $subtitles = Subtitle::where('name', 'home')->first();
+        $useReCaptcha = config('services.recaptcha.enabled');
+        $reCaptchaKey = config('services.recaptcha.key');
 
-        return view('home.index', compact('educations', 'experiences', 'portfolios', 'page', 'slider', 'contact', 'subtitles'));
+        return view('home.index', compact('educations', 'experiences', 'portfolios', 'page', 'slider', 'contact', 'subtitles', 'useReCaptcha', 'reCaptchaKey'));
     }
 }

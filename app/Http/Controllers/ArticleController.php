@@ -24,8 +24,10 @@ class ArticleController extends Controller
         $contact = Contact::where('name', 'articles')->first();
         $subtitles = Subtitle::where('name', 'articles')->first();
         $articlesText = ArticlesText::where('name', 'articles')->first();
+        $useReCaptcha = config('services.recaptcha.enabled');
+        $reCaptchaKey = config('services.recaptcha.key');
 
-        return view('article.index', compact('articles', 'page', 'contact', 'subtitles', 'articlesText'));
+        return view('article.index', compact('articles', 'page', 'contact', 'subtitles', 'articlesText', 'useReCaptcha', 'reCaptchaKey'));
     }
 
     public function show($slug)
@@ -37,7 +39,9 @@ class ArticleController extends Controller
         $articlesText = ArticlesText::where('name', 'articles')->first();
         $article->increment('views');
         $article->save();
+        $useReCaptcha = config('services.recaptcha.enabled');
+        $reCaptchaKey = config('services.recaptcha.key');
 
-        return view('article.show', compact('article', 'page', 'contact', 'subtitles', 'articlesText'));
+        return view('article.show', compact('article', 'page', 'contact', 'subtitles', 'articlesText', 'useReCaptcha', 'reCaptchaKey'));
     }
 }

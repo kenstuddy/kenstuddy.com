@@ -659,3 +659,11 @@ code {
 .author-info {
     margin-left: 10px;
 }
+
+.g-recaptcha {
+    margin-top: 15px;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
