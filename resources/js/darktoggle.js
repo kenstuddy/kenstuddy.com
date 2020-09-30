@@ -1,5 +1,5 @@
 toggleDarkMode = () => {
-    if (document.getElementById('darkmode').value = !document.getElementById('darkmode').value) {
+    if ((document.getElementById('darkmode').value = !document.getElementById('darkmode').value) === true) {
         enableDarkMode();
         localStorage.setItem("darkmode", "true");
     } else {
@@ -9,7 +9,7 @@ toggleDarkMode = () => {
 }
 
 loadDarkMode = () => {
-    if (localStorage.getItem("darkmode") == "true") {
+    if (localStorage.getItem("darkmode") === "true") {
         document.getElementById('darkmode').value = true;
         enableDarkMode();
     } else {
