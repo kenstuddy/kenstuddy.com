@@ -20,10 +20,10 @@ class HomeController extends Controller
         $experiences = Experience::all();
         $portfolios = Portfolio::all();
         //Here we could use the DB query builder as it provides slightly better performance, but Eloquent provides extra functionality.
-        $page = Page::where('name', 'home')->first();
-        $slider = Slider::where('name', 'home')->first();
-        $contact = Contact::where('name', 'home')->first();
-        $subtitles = Subtitle::where('name', 'home')->first();
+        $page = Page::where('name', 'home')->first() ?? new Page();
+        $slider = Slider::where('name', 'home')->first() ?? new Slider();
+        $contact = Contact::where('name', 'home')->first() ?? new Contact();
+        $subtitles = Subtitle::where('name', 'home')->first() ?? new Subtitle();
         $useReCaptcha = config('services.recaptcha.enabled');
         $reCaptchaKey = config('services.recaptcha.key');
 
