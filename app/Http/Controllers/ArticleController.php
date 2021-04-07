@@ -19,11 +19,11 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::orderBy('published_at', 'DESC')->where('published', 1)->simplePaginate(5);
-        $page = Page::where('name', 'articles')->first();
-        $contact = Contact::where('name', 'articles')->first();
-        $subtitles = Subtitle::where('name', 'articles')->first();
-        $articlesText = ArticlesText::where('name', 'articles')->first();
+        $articles = Article::orderBy('published_at', 'DESC')->where('published', 1)->simplePaginate(5) ?? new Article();
+        $page = Page::where('name', 'articles')->first() ?? new Page();
+        $contact = Contact::where('name', 'articles')->first() ?? new Contact();
+        $subtitles = Subtitle::where('name', 'articles')->first() ?? new Subtitle();
+        $articlesText = ArticlesText::where('name', 'articles')->first() ?? new ArticlesText();
         $useReCaptcha = config('services.recaptcha.enabled');
         $reCaptchaKey = config('services.recaptcha.key');
 
