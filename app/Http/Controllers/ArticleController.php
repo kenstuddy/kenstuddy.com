@@ -33,10 +33,10 @@ class ArticleController extends Controller
     public function show($slug)
     {
         $article = Article::where('published', 1)->where('slug', $slug)->firstOrFail();
-        $page = Page::where('name', 'article')->first();
-        $contact = Contact::where('name', 'article')->first();
-        $subtitles = Subtitle::where('name', 'articles')->first();
-        $articlesText = ArticlesText::where('name', 'articles')->first();
+        $page = Page::where('name', 'article')->first() ?? new Page();
+        $contact = Contact::where('name', 'article')->first() ?? new Contact();
+        $subtitles = Subtitle::where('name', 'articles')->first() ?? new Subtitle();
+        $articlesText = ArticlesText::where('name', 'articles')->first() ?? new ArticlesText();
         $article->increment('views');
         $article->save();
         $useReCaptcha = config('services.recaptcha.enabled');
