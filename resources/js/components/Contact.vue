@@ -1,33 +1,33 @@
 <template>
     <div class="container" v-cloak>
         <header class="section-header">
-            <h2 class="section-title"><span>Contact</span></h2>
+            <h2 class="section-title" :class="contact_text_class"><span>Contact</span></h2>
             <div class="spacer"></div>
-            <p class="section-subtitle">{{ contact_subtitle }}</p>
+            <p class="section-subtitle" :class="contact_title_class">{{ contact_subtitle }}</p>
         </header>
         <div class="row">
             <div class="col-sm-5 contact-info">
-                <h3>Contact Info</h3>
-                <p><i v-if="contact_email.length > 0" class="fa fa-envelope-o"></i>{{ contact_email }}</p>
-                <p><i v-if="contact_phone.length > 0" class="fa fa-phone"></i>{{ contact_phone }}</p>
+                <h3 :class="contact_text_class">Contact Info</h3>
+                <p :class="contact_text_class"><i v-if="contact_email.length > 0" class="fa fa-envelope-o"></i>{{ contact_email }}</p>
+                <p :class="contact_text_class"><i v-if="contact_phone.length > 0" class="fa fa-phone"></i>{{ contact_phone }}</p>
             </div>
             <div class="col-sm-7">
-                <h3>{{ contact_sentence }}</h3>
+                <h3 :class="contact_text_class">{{ contact_sentence }}</h3>
                 <form class="form-horizontal" @submit.prevent="submitContact()" id="contact_form" v-show="form">
                     <div class="control-group">
-                        <label for="name" class="control-label">Name</label>
-                        <input type="text" class="form-control" v-model="name" name="name" placeholder="Your name" id="name" v-validate="'required'" :disabled="submitted">
-                        <p class="help-block text-danger" v-show="errors.has('name')"><ul role="alert"><li>{{ errors.first('name') }}</li></ul></p>
+                        <label for="name" class="control-label" :class="contact_text_class">Name</label>
+                        <input type="text" class="form-control" :class="[contact_form_background_class, contact_input_class]" v-model="name" name="name" placeholder="Your name" id="name" v-validate="'required'" :disabled="submitted">
+                        <p class="help-block text-danger" v-show="errors.has('name')"><ul role="alert"><li :class="contact_error_class">{{ errors.first('name') }}</li></ul></p>
                     </div>
                     <div class="control-group">
-                        <label for="email" class="control-label">Email</label>
-                        <input type="email" class="form-control" id="email" v-model="email" placeholder="Your email address" name="email" v-validate="'required|email'" :disabled="submitted">
-                        <p class="help-block text-danger" v-show="errors.has('email')"><ul role="alert"><li>{{ errors.first('email') }}</li></ul></p>
+                        <label for="email" class="control-label" :class="contact_text_class">Email</label>
+                        <input type="email" class="form-control" :class="[contact_form_background_class, contact_input_class]" id="email" v-model="email" placeholder="Your email address" name="email" v-validate="'required|email'" :disabled="submitted">
+                        <p class="help-block text-danger" v-show="errors.has('email')"><ul role="alert"><li :class="contact_error_class">{{ errors.first('email') }}</li></ul></p>
                     </div>
                     <div class="control-group">
-                        <label for="message" class="control-label">Message</label>
-                        <textarea class="form-control" id="message" rows="6" v-model="message" name="message" placeholder="Your message" v-validate="'required'" :disabled="submitted"></textarea>
-                        <p class="help-block text-danger" v-show="errors.has('message')"><ul role="alert"><li>{{ errors.first('message') }}</li></ul></p>
+                        <label for="message" class="control-label" :class="contact_text_class">Message</label>
+                        <textarea class="form-control" :class="[contact_form_background_class, contact_input_class]" id="message" rows="6" v-model="message" name="message" placeholder="Your message" v-validate="'required'" :disabled="submitted"></textarea>
+                        <p class="help-block text-danger" v-show="errors.has('message')"><ul role="alert"><li :class="contact_error_class">{{ errors.first('message') }}</li></ul></p>
                     </div>
                     <div v-if="successful" name="alert" id="alert" class="control-group alert alert-success">
                         <button type="button" class="close" @click="resetContact">×</button>
@@ -41,7 +41,7 @@
                       :data-sitekey="datasite_key">
                   </div>
                     <div class="control-group">
-                        <button type="submit" class="btn btn-contact btn-block btn-lg" :disabled="submitted">{{ submitText }}</button>
+                        <button type="submit" class="btn btn-contact btn-block btn-lg" :class="[contact_btn_class, contact_btn_border_class]" :disabled="submitted">{{ submitText }}</button>
                     </div>
                 </form>
             </div>
@@ -58,7 +58,15 @@
             'contact_phone',
             'contact_sentence',
             'use_recaptcha',
-            'datasite_key'
+            'datasite_key',
+            'contact_title_class',
+            'contact_text_class',
+            'contact_error_class',
+            'contact_btn_class',
+            'contact_btn_border_class',
+            'contact_border_class',
+            'contact_form_background_class',
+            'contact_input_class'
         ],
         mounted() {
             //This is where the custom error messages for the Contact component are defined.
@@ -133,11 +141,11 @@
                         this.name = "";
                         this.email = "";
                         this.message = "";
-                    }     
+                    }
                     this.successful = "";
                     this.unsuccessful = "";
                     //On the next tick, reset the validator so that no error messages occur from resetting the form. This still allows error messages to occur the following tick (when there are actually errors like invalid email).
-                    this.$nextTick(() => { 
+                    this.$nextTick(() => {
                         this.$validator.reset();
                     });
                     this.submitted = false;

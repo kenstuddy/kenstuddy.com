@@ -8,7 +8,7 @@
             @gitdown
         @endsection
     </head>
-    <body>
+    <body class="{{ theme("bg-darker", "bg-white") }}">
         @include('layouts.nav')
         <div id="app">
             @include('layouts.profile')

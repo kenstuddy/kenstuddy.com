@@ -8,14 +8,14 @@
 
         <div class="center-intro">
             <header class="centered">
-                <h1 class="my-name">{{ my_name }}</h1>
-                <p class="my-title">{{ my_title }}</p>
+                <h1 class="my-name" :class="slider_text_class">{{ my_name }}</h1>
+                <p class="my-title" :class="slider_text_class">{{ my_title }}</p>
             </header>
             <div class="socia-icons">
-                <a :href="primary_url" aria-label="Primary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-lin"><i class="fa my-fa-linkedin-square"></i></a>
-                <a :href="secondary_url" aria-label="Secondary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-github"><i class="fa my-fa-github-square"></i></a>
+                <a :href="primary_url" aria-label="Primary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-lin" :class="[slider_btn_class, slider_border_class]"><i class="fa my-fa-linkedin-square"></i></a>
+                <a :href="secondary_url" aria-label="Secondary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-github" :class="[slider_btn_class, slider_border_class]"><i class="fa my-fa-github-square"></i></a>
             </div>
-            <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll">{{ button_text }}</a>
+            <a id="contact-button" @click.prevent="smoothScroll('page-contact')" href="" class="btn btn-contact contact-me smooth-scroll " :class="[slider_btn_class, slider_btn_border_class]">{{ button_text }}</a>
         </div>
         <a class="arrow arrow-prev" @click="previousSlide"></a>
         <a class="arrow arrow-next" @click="nextSlide"></a>
@@ -30,7 +30,11 @@
             'my_title',
             'button_text',
             'primary_url',
-            'secondary_url'
+            'secondary_url',
+            'slider_text_class',
+            'slider_btn_class',
+            'slider_btn_border_class',
+            'slider_border_class'
         ],
         data() {
             return {

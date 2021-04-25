@@ -1,12 +1,12 @@
-<section id="page-portfolio" class="page-portfolio">
+<section id="page-portfolio" class="page-portfolio {{ theme("bg-darker", "bg-white") }}">
     <div class="container">
         <div>
             <header class="section-header">
-                    <h2 class="section-title">
+                    <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}">
                         <span>Portfolio</span>
                     </h2>
                     <div class="spacer"></div>
-                    <p class="section-subtitle">@isset($subtitles['portfolio_subtitle']) {{ $subtitles['portfolio_subtitle'] }} @endisset</p>
+                    <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($subtitles['portfolio_subtitle']) {{ $subtitles['portfolio_subtitle'] }} @endisset</p>
                 </header>
             <div id="grid" class="row grid-wrapper">
                 @foreach ($portfolios as $portfolio)

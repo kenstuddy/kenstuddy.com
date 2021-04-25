@@ -1,9 +1,9 @@
-<section id="page-profile" class="page-profile">
+<section id="page-profile" class="page-profile {{ theme("bg-gray-dark", "bg-gray") }}">
     <div class="container">
         <header class="section-header">
             <div class="spacer"></div>
             @isset($subtitles['article_subtitle'])
-                <p class="section-subtitle">{{ $subtitles['article_subtitle'] }}</p>
+                <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{{ $subtitles['article_subtitle'] }}</p>
             @endisset
         </header>
         <div class="row">
@@ -15,14 +15,14 @@
                                 <a href="/"><img class="rounded-circle article-profile-image" src="/img/{{ $article->image }}" title="{{ $article->author_name }}" alt="{{ $article->author_name }}"></a>
                             </div>
                             <div class="text-left author-info">
-                                <h5>
+                                <h5 class="{{ theme("text-gray-light", "text-gray") }}">
                                     {{ $article->author_name }}
                                 </h5>
                                 <div>
-                                    <p>
+                                    <p class="{{ theme("text-gray-light", "text-gray") }}">
                                       {{ $article->byline }}
                                     </p>
-                                    <p>
+                                    <p class="{{ theme("text-gray-light", "text-gray") }}">
                                       @if(!empty($articlesText['article_posted_text'])){{ $articlesText['article_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                                     </p>
                                 </div>
@@ -36,28 +36,28 @@
             <div class="col-lg-12" style="margin-bottom: -50px">
                 <article class="article center-block text-center">
                     <header>
-                        <h1>{{ $article->title }}</h1>
-                        <p>{!! html_entity_decode($article->description) !!}</p>
+                        <h1 class="{{ theme("text-gray-light", "text-gray") }}">{{ $article->title }}</h1>
+                        <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($article->description) !!}</p>
                     </header>
                 </article>
             </div>
         </div>
     </div>
 </section>
-<section id="page-article" class="page-article">
+<section id="page-article" class="page-article  {{ theme("bg-darker", "bg-white") }}">
     <div class="container article center-block text-center">
         <div class="row">
              <div class="col-lg-12">
                  <header class="section-header">
                     <div class="spacer"></div>
                     @isset($subtitles['article_alternate_subtitle'])
-                        <p class="section-subtitle">{{ $subtitles['article_alternate_subtitle'] }}</p>
+                        <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{{ $subtitles['article_alternate_subtitle'] }}</p>
                     @endisset
                 </header>
                 <div class="row">
                     <div class="col-lg-12">
-                        <article class="article text-left markdown-body">
-                            <p>{!! GitDown::parseAndCache($article->content) !!}</p>
+                        <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
+                            <p class="{{ theme("text-gray-light", "text-gray") }}">{!! GitDown::parseAndCache($article->content) !!}</p>
                         </article>
                     </div>
                 </div>

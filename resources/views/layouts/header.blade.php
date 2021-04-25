@@ -7,6 +7,7 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
-<script id="darkmode" src="{{ mix('js/dark-mode.js') }}"></script>
+<div id="darkmode" style="display:none"></div>
+@if (isset($_COOKIE['darkmode']) && $_COOKIE['darkmode'] === "true") @php $_SESSION['darkmode'] = true @endphp @else @php $_SESSION['darkmode'] = false @endphp @endif
 <script src="{{ mix('js/dark-toggle.js') }}"></script>
-<script>loadDarkMode();</script>
+@if (!isset($_COOKIE['darkmode'])) <script>loadDarkMode();</script> @endif
