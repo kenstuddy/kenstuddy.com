@@ -3,7 +3,7 @@
         <header class="section-header">
             <h2 class="section-title" :class="contact_text_class"><span>Contact</span></h2>
             <div class="spacer"></div>
-            <p class="section-subtitle" :class="contact_title_class">{{ contact_subtitle }}</p>
+            <p class="section-subtitle" :class="contact_text_class">{{ contact_subtitle }}</p>
         </header>
         <div class="row">
             <div class="col-sm-5 contact-info">
@@ -59,7 +59,6 @@
             'contact_sentence',
             'use_recaptcha',
             'datasite_key',
-            'contact_title_class',
             'contact_text_class',
             'contact_error_class',
             'contact_btn_class',
