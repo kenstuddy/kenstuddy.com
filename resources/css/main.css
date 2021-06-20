@@ -734,7 +734,8 @@ a.text-gray-light:hover {
     background: rgba(36, 37, 37, 0.85) !important;
 }
 .bg-nav-dark {
-    background: #555555 !important;
+    color: #aaa !important;
+    border-color: #686868 !important;
 }
 .bg-nav-dark:active,
 .bg-nav-dark:hover {
