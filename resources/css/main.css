@@ -815,3 +815,16 @@ a.text-gray-light:hover {
 .border-page-dark {
     border: 1px solid #333333 !important;
 }
+
+.container-custom {
+    max-width: 1140px;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    font-weight: 600;
+}

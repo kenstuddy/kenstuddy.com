@@ -1,5 +1,5 @@
 <template>
-    <div class="container" v-cloak>
+    <div class="container container-custom" v-cloak>
         <header class="section-header">
             <h2 class="section-title" :class="contact_text_class"><span>Contact</span></h2>
             <div class="spacer"></div>
@@ -30,11 +30,11 @@
                         <p class="help-block text-danger" v-show="errors.has('message')"><ul role="alert"><li :class="contact_error_class">{{ errors.first('message') }}</li></ul></p>
                     </div>
                     <div v-if="successful" name="alert" id="alert" class="control-group alert alert-success">
-                        <button type="button" class="close" @click="resetContact">×</button>
+                        <button type="button" class="btn-close float-end" @click="resetContact">&nbsp;</button>
                         <span>{{ successful }}</span>
                     </div>
                     <div v-if="unsuccessful" name="alert" id="alert" class="control-group alert alert-danger">
-                         <button type="button" class="close" @click="resetContact">×</button>
+                        <button type="button" class="btn-close float-end" @click="resetContact">&nbsp;</button>
                         <span>{{ unsuccessful }}</span>
                     </div>
                   <div v-if="use_recaptcha" data-size="invisible" id="g-recaptcha" class="g-recaptcha"

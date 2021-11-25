@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light navbar-expand-md fixed-top {{ theme("bg-nav-darker", "bg-nav-lighter" )}}">
-    <div class="container">
+    <div class="container container-custom">
         <span class="icon-bar"></span>
         <input type="checkbox" class="navbar-toggler collapsed" id="navbar-toggle-cbox">
         <div class="navbar-header">

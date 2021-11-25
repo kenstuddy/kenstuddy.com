@@ -1,5 +1,5 @@
 <section id="page-profile" class="page-profile {{ theme("bg-gray-dark", "bg-gray") }}">
-    <div class="container">
+    <div class="container container-custom">
         <header class="section-header">
             <div class="spacer"></div>
             @isset($subtitles['article_subtitle'])

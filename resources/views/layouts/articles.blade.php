@@ -1,5 +1,5 @@
 <section id="page-articles" class="page-articles {{ theme("bg-darker", "bg-white") }}">
-    <div class="container">
+    <div class="container container-custom">
         <header class="section-header">
             <div class="spacer"></div>
             @isset($subtitles['articles_subtitle'])

@@ -1,5 +1,5 @@
 <section id="page-profile" class="page-profile {{ theme("bg-gray-dark", "bg-gray") }}">
-    <div class="container">
+    <div class="container container-custom">
         <header class="section-header">
             <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}">{{ $page['title'] }}</h2>
             <div class="spacer"></div>

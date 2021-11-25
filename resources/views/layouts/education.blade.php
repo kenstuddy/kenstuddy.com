@@ -1,5 +1,5 @@
 <section id="page-education" class="page-education {{ theme("bg-darker", "bg-white") }}">
-    <div class="container">
+    <div class="container container-custom">
         <header class="section-header">
              <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}"><span>Education</span></h2>
             <div class="spacer"></div>

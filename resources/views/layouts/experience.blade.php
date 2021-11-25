@@ -1,5 +1,5 @@
 <section id="page-experience" class="page-experience {{ theme("bg-gray-dark", "bg-gray") }}">
-    <div class="container">
+    <div class="container container-custom">
         <header class="section-header">
              <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}"><span>Experience</span></h2>
             <div class="spacer"></div>

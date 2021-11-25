@@ -1,5 +1,5 @@
 <section id="page-portfolio" class="page-portfolio {{ theme("bg-darker", "bg-white") }}">
-    <div class="container">
+    <div class="container container-custom">
         <div>
             <header class="section-header">
                     <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}">
