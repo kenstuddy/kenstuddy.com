@@ -15,6 +15,7 @@ $factory->define(Experience::class, function (Faker $faker) {
         'end_year' => (string) Carbon::now()->year,
         'string_year' => $seasons[mt_rand(0, 3)].Carbon::now()->subYear()->year,
         'description' => $faker->paragraph(),
+        'active' => 1,
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ];

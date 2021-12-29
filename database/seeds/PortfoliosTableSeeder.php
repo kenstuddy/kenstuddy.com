@@ -17,6 +17,7 @@ class PortfoliosTableSeeder extends Seeder
             $portfolio->name = $portfoliosCounter + 1;
             $portfolio->alt_text = $name;
             $portfolio->title = $name;
+            $portfolio->active = 1;
             $portfolio->save();
         }
     }

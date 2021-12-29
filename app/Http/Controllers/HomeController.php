@@ -16,10 +16,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $educations = Education::all();
-        $experiences = Experience::all();
-        $portfolios = Portfolio::all();
         //Here we could use the DB query builder as it provides slightly better performance, but Eloquent provides extra functionality.
+        $educations = Education::where('active', 1)->get();
+        $experiences = Experience::where('active', 1)->get();
+        $portfolios = Portfolio::where('active', 1)->get();
         $page = Page::where('name', 'home')->first() ?? new Page();
         $slider = Slider::where('name', 'home')->first() ?? new Slider();
         $contact = Contact::where('name', 'home')->first() ?? new Contact();

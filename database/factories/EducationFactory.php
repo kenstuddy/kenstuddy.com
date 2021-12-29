@@ -10,6 +10,7 @@ $factory->define(Education::class, function (Faker $faker) {
         'credential' => $faker->name,
         'string_year' => Carbon::now()->subYear()->year,
         'description' => $faker->paragraph(),
+        'active' => 1,
         'created_at' => Carbon::now(),
         'updated_at' => Carbon::now(),
     ];

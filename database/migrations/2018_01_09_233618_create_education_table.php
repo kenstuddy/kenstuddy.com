@@ -22,6 +22,7 @@ class CreateEducationTable extends Migration
             $table->string('end_year')->nullable();
             $table->string('string_year')->nullable();
             $table->text('description');
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

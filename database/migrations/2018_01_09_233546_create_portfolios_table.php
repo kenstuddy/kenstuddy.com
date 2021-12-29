@@ -18,6 +18,7 @@ class CreatePortfoliosTable extends Migration
             $table->string('name');
             $table->string('alt_text')->nullable();
             $table->string('title')->nullable();
+            $table->boolean('active')->default(0);
             $table->timestamps();
         });
     }

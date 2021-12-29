@@ -20,6 +20,7 @@ class ExperiencesTableSeeder extends Seeder
             $experience->start_year = $experienceYear - (2 * $experiencesCounter);
             $experience->end_year = $experienceYear - (1 * $experiencesCounter);
             $experience->description = $this->faker->paragraph;
+            $experience->active = 1;
             $experience->save();
         }
     }

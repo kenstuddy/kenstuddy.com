@@ -35,6 +35,7 @@ class EducationTableSeeder extends Seeder
             $education->credential = Arr::random($credentials);
             $education->string_year = ' - Graduated: '.($graduationYear - ($educationsCounter * 2));
             $education->description = $this->faker->paragraph;
+            $education->active = 1;
             $education->save();
         }
     }
