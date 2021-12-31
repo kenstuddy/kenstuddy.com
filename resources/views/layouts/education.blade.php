@@ -7,7 +7,7 @@
         </header>
         <div class="row">
             @foreach ($educations as $education)
-                <div class="col-lg-{{ 12 / count($educations)  }}">
+                <div class="col-lg-{{ 12 / min(3, count($educations))  }}">
                     <article class="education">
                         <header>
                             <h3 class="{{ theme("text-gray-light", "text-gray") }}">{{ $education->organization }}</h3>
