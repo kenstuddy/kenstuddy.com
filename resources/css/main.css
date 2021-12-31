@@ -820,6 +820,17 @@ a.text-gray-light:hover {
     max-width: 1140px;
 }
 
+@media (min-width: 768px) {
+    .container-portfolio {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .container-portfolio {
+        margin-bottom: 25px;
+    }
+}
+
 .btn-block {
     display: block;
     width: 100%;

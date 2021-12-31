@@ -10,7 +10,7 @@
                 </header>
             <div id="grid" class="row grid-wrapper">
                 @foreach ($portfolios as $portfolio)
-                    <div class="mix col-xs-12 col-sm-12 col-md-{{ 12 / count($portfolios) }} col-lg-{{ 12 / count($portfolios) }} col-lg-{{ 12 / count($portfolios) }} text-center">
+                    <div class="mix col-xs-12 col-sm-12 col-md-{{ 12 / min(4, count($portfolios)) }} col-lg-{{ 12 / min(4, count($portfolios)) }} col-lg-{{ 12 / min(4, count($portfolios)) }} container-portfolio text-center">
                         <div class="overlay">
                             <img loading="lazy" v-img:group="{src: './img/portfolio/large/{{ $portfolio->name }}.jpg'}" src="./img/portfolio/small/{{ $portfolio->name }}.jpg" class="mobile-img img-fluid center-block mx-auto overlayblue" alt="{{ $portfolio->alt_text }}" title="{{ $portfolio->title }}">
                         </div>
