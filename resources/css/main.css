@@ -199,6 +199,16 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+@media (max-width: 992px) {
+    .arrow-prev {
+        margin-left: 30px;
+        margin-top:  10px;
+    }
+    .arrow-next {
+        margin-right: 30px;
+        margin-top:  10px;
+    }
+}
 .light {
     color: #ffffff;
 }
