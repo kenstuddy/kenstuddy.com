@@ -1,8 +1,11 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Models\Education;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class EducationTableSeeder extends Seeder
@@ -34,7 +37,7 @@ class EducationTableSeeder extends Seeder
             $education->organization = Arr::random($organizations);
             $education->credential = Arr::random($credentials);
             $education->string_year = ' - Graduated: '.($graduationYear - ($educationsCounter * 2));
-            $education->description = $this->faker->paragraph;
+            $education->description = $this->faker->paragraph();
             $education->active = 1;
             $education->save();
         }

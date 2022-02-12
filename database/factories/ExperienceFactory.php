@@ -1,22 +1,33 @@
 <?php
 
+namespace Database\Factories;
+
 use App\Models\Experience;
 use Carbon\Carbon;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Experience::class, function (Faker $faker) {
-    $seasons = ['Winter', 'Spring', 'Summer', 'Fall'];
+class ExperienceFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        $seasons = ['Winter', 'Spring', 'Summer', 'Fall'];
 
-    return [
-        'position' => $faker->jobTitle,
-        'company' => $faker->company,
-        'location' => $faker->city,
-        'start_year' => (string) Carbon::now()->subYear()->year,
-        'end_year' => (string) Carbon::now()->year,
-        'string_year' => $seasons[mt_rand(0, 3)].Carbon::now()->subYear()->year,
-        'description' => $faker->paragraph(),
-        'active' => 1,
-        'created_at' => Carbon::now(),
-        'updated_at' => Carbon::now(),
-    ];
-});
+        return [
+            'position' => $this->faker->jobTitle(),
+            'company' => $this->faker->company(),
+            'location' => $this->faker->city(),
+            'start_year' => (string) Carbon::now()->subYear()->year,
+            'end_year' => (string) Carbon::now()->year,
+            'string_year' => $seasons[mt_rand(0, 3)].Carbon::now()->subYear()->year,
+            'description' => $this->faker->paragraph(),
+            'active' => 1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ];
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "calebporzio/gitdown",
+    "description": "A simple package to parse Github Flavored Markdown in PHP",
+    "keywords": [
+        "calebporzio",
+        "gitdown"
+    ],
+    "homepage": "https://github.com/calebporzio/gitdown",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Caleb Porzio",
+            "email": "calebporzio@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.0|^8.4|^9.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GitDown\\GitDownServiceProvider"
+            ],
+            "aliases": {
+                "GitDown": "GitDown\\Facades\\GitDown"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "GitDown\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GitDown\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

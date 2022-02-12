@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Models\Contact;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
@@ -10,7 +12,7 @@ class ContactsTableSeeder extends Seeder
     public function run()
     {
         $this->faker = Faker::create();
-        $email = $this->faker->email;
+        $email = $this->faker->email();
         $contactNames = [
             'home',
             'article',
@@ -21,7 +23,7 @@ class ContactsTableSeeder extends Seeder
             $contact = new Contact();
             $contact->name = $contactNames[$contactsCounter];
             $contact->contact_email = $email;
-            $contact->contact_sentence = $this->faker->sentence;
+            $contact->contact_sentence = $this->faker->sentence();
             $contact->save();
         }
     }

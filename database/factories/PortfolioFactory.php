@@ -1,14 +1,25 @@
 <?php
 
+namespace Database\Factories;
+
 use App\Models\Portfolio;
 use Carbon\Carbon;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Portfolio::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'active' => 1,
-        'created_at' => Carbon::now(),
-        'updated_at' => Carbon::now(),
-    ];
-});
+class PortfolioFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name(),
+            'active' => 1,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ];
+    }
+}

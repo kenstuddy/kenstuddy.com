@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
-                            <p class="{{ theme("text-gray-light", "text-gray") }}">{!! GitDown::parseAndCache($article->content) !!}</p>
+                            <p class="{{ theme("text-gray-light", "text-gray") }}">{!! GitDown::parseAndCache($article->content) //Illuminate\Support\Str::of($article->content)->markdown() !!}</p>
                         </article>
                     </div>
                 </div>

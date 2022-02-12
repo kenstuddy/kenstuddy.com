@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContactApiController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::post('/contact/send', 'ContactApiController@send');
+Route::post('/contact/send', [ContactApiController::class, 'send']);

@@ -849,3 +849,50 @@ a.text-gray-light:hover {
 input:focus::placeholder, textarea:focus::placeholder {
     font-weight: 600;
 }
+
+.text-gray-light code {
+    color: #D2D2D2 !important;
+    background-color: #757575 !important;
+}
+
+.text-gray-light pre code {
+    color: #D2D2D2 !important;
+    background-color: inherit !important;
+}
+
+.text-gray-light .highlight pre, .text-gray-light pre {
+    background-color: #757575 !important;
+    color: #D2D2D2 !important;
+}
+
+.text-gray-light .pl-c {
+    color: #4DD327 !important;
+}
+
+.text-gray-light .pl-s1 {
+    color: #D2D2D2 !important;
+}
+
+.text-gray-light .pl-kos {
+    color: #D2D2D2 !important;
+}
+
+.article {
+    text-align: left;
+}
+
+.article .header {
+    text-align: center;
+}
+
+.article-title {
+    text-decoration: inherit;
+}
+
+article header p a {
+    text-decoration: inherit;
+}
+
+.article p a {
+    text-decoration: inherit;
+}

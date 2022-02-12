@@ -17,7 +17,7 @@ class ContactApiController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required',
-            'g-recaptcha-response' => $reCaptcha
+            'g-recaptcha-response' => $reCaptcha,
         ]);
         //Retrieve the destination email address from the app configuration file which loads the value from the .env file.
         $destinationEmail = config('app.destination_email');

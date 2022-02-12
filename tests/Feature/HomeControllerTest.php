@@ -17,11 +17,11 @@ class HomeControllerTest extends TestCase
     public function testIndex(): void
     {
         //Arrange.
-        $education = factory(Education::class)->create();
-        $experience = factory(Experience::class)->create(['string_year' => null]);
-        $portfolio = factory(Portfolio::class)->create();
-        factory(Page::class)->create(['name' => 'home']);
-        factory(Slider::class)->create(['name' => 'home']);
+        $education = Education::factory()->create();
+        $experience = Experience::factory()->create(['string_year' => null]);
+        $portfolio = Portfolio::factory()->create();
+        Page::factory()->create(['name' => 'home']);
+        Slider::factory()->create(['name' => 'home']);
 
         //Act.
         $response = $this->get('/');

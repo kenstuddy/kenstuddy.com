@@ -2,26 +2,27 @@
     "private": true,
     "scripts": {
         "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "development": "mix",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "mix watch --watch-options-poll=1000",
+        "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.24.0",
+        "axios": "^0.25",
         "bootstrap": "^5",
-        "cross-env": "^5.2.1",
         "es-abstract": "^1.14.2",
         "font-awesome": "4.3.0",
-        "laravel-mix": "^5",
+        "laravel-mix": "^6.0.12",
         "normalize.css": "^8.0.1",
         "popper.js": "^1.15.0",
+        "postcss": "^8.2.8",
         "v-img": "^0.2.0",
         "vee-validate": "^2.2.15",
-        "vue": "^2.6.10",
+        "vue": "^2.6.14",
+        "vue-loader": "^15.9.8",
         "vue-resource": "^1.5.1",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.14"
     }
 }

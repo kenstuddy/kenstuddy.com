@@ -20,7 +20,7 @@ if (window.location.pathname == '/') {
 
 /*
  * Since we are using invisible reCaptcha, we must execute recaptcha manually.
- * If we wanted to use regular reCaptcha, we would remove the MutationObserver.
+ * If we wanted to use regular reCaptcha, we could remove the MutationObserver.
  */
 const observer = new MutationObserver(() => {
     if (window.grecaptcha && window.grecaptcha.execute) {
