@@ -8,7 +8,7 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    color: #757575;
+    color: #616161;
     line-height: 1.42857143;
     font-size: 14px;
 }
@@ -758,7 +758,7 @@ a.text-gray-light:hover {
     color: #9e9587ff !important;
 }
 .text-gray-dark-link {
-    color: #777777 !important;
+    color: #666666 !important;
 }
 .text-gray-link:hover,
 .text-gray-dark-link:hover,
@@ -813,7 +813,7 @@ a.text-gray-light:hover {
     background: #30719a !important;
 }
 .bg-contact-light {
-    background: #3498db !important;
+    background: #007acd !important;
 }
 .text-contact-input-dark {
     color: #2e3236 !important;

@@ -22,4 +22,4 @@ mix.styles([
    .js([
     'resources/js/main.js',
     'resources/js/app.js'
-], 'public/js/app.js').vue({ version: 2 });
+], 'public/js/app.js').vue({ version: 2 }).version();
