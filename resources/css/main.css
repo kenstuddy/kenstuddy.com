@@ -339,7 +339,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #grid .mix .thumbnail {
-    border: 2px thin #F7F7F7;
+    border: 2px thin #f7f7f7;
     padding: 0;
     border-radius: 0;
 }
@@ -720,12 +720,27 @@ a.text-gray-light:hover {
 .text-gray-title {
     color: #b2ab9e !important;
 }
+
 .bg-gray {
     background: #f7f7f7 !important;
 }
+.bg-gray a {
+    color: #0061ef !important; 
+}
+.bg-gray a:hover {
+    color: #3498db !important; 
+}
+
 .bg-gray-dark {
     background: #282929 !important;
 }
+.bg-gray-dark a {
+    color: #3b91ff !important; 
+}
+.bg-gray-dark a:hover {
+    color: #0080e8 !important; 
+}
+
 .bg-darker {
     background: #242525 !important;
 }
@@ -807,10 +822,10 @@ a.text-gray-light:hover {
     color: #ffffff !important;
 }
 .text-contact-dark {
-    color: #e5e0d8 !important;
+    color: #ebeae9 !important;
 }
 .bg-contact-dark {
-    background: #30719a !important;
+    background: #2c688f !important;
 }
 .bg-contact-light {
     background: #007acd !important;
