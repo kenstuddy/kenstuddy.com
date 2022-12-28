@@ -911,3 +911,10 @@ article header p a {
 .article p a {
     text-decoration: inherit;
 }
+
+article.text-gray > pre.shiki {
+    background-color: rgb(243, 244, 246)  !important;
+}
+article.text-gray-light > pre.shiki {
+    background-color: rgb(19, 20, 21)  !important;
+}

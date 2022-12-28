@@ -21,7 +21,8 @@ mix.styles([
    .scripts('resources/js/darktoggle.js','public/js/dark-toggle.js')
    .js([
     'resources/js/main.js',
-    'resources/js/app.js'
+    'node_modules/shiki/dist/index.js',
+    'resources/js/app.js',
 ], 'public/js/app.js').vue({ version: 2 });
 
 if (mix.inProduction()) {

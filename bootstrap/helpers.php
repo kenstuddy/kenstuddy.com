@@ -11,3 +11,6 @@ function theme($class, $secondClass) {
     return $secondClass;
 }
 
+function darkModeEnabled() {
+    return (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == true);
+}

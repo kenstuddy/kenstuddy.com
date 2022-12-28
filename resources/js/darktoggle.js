@@ -86,6 +86,12 @@ enableDarkMode = () => {
         it.classList.remove('text-contact-input-dark');
         it.classList.add('text-contact-input-light');
     });
+    document.querySelectorAll(".article-dark").forEach((it) => {
+        it.style.display = "";
+    });
+    document.querySelectorAll(".article-light").forEach((it) => {
+        it.style.display = "none";
+    });
 }
 
 disableDarkMode = () => {
@@ -152,5 +158,11 @@ disableDarkMode = () => {
     document.querySelectorAll(".text-contact-input-light").forEach((it) => {
         it.classList.remove('text-contact-input-light');
         it.classList.add('text-contact-input-dark');
+    });
+    document.querySelectorAll(".article-dark").forEach((it) => {
+        it.style.display = "none";
+    });
+    document.querySelectorAll(".article-light").forEach((it) => {
+        it.style.display = "";
     });
 }
