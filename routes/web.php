@@ -22,12 +22,12 @@ Route::get('/articles', function () {
     $app = app();
     $articleController = $app->make(ArticleController::class);
 
-    return (config('app.articles_enabled')) ? $articleController->callAction('index', []) : redirect('/', 302);
+    return (config('app.articles_enabled')) ? $articleController->callAction('index', []) : abort(404);
 });
 
 Route::get('/article/{slug}', function ($slug) {
     $app = app();
     $articleController = $app->make(ArticleController::class);
 
-    return (config('app.articles_enabled')) ? $articleController->callAction('show', compact('slug')) : redirect('/', 302);
+    return (config('app.articles_enabled')) ? $articleController->callAction('show', compact('slug')) : abort(404);
 });
