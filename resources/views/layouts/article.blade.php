@@ -58,23 +58,23 @@
                     @if (darkModeEnabled())
                         <div class="col-lg-12 article-dark">
                             <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
-                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-dark")->toHtml($article->content) //GitDown::parseAndCache($article->content) ////Illuminate\Support\Str::of($article->content)->markdown() !!}
+                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-dark")->toHtml($article->content) //Illuminate\Support\Str::of($article->content)->markdown() !!}
                             </article>
                         </div>
                         <div class="col-lg-12 article-light" style="display: none">
                             <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
-                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-light")->toHtml($article->content) //GitDown::parseAndCache($article->content) ////Illuminate\Support\Str::of($article->content)->markdown() !!}
+                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-light")->toHtml($article->content) //Illuminate\Support\Str::of($article->content)->markdown() !!}
                             </article>
                         </div>
                     @else
                         <div class="col-lg-12 article-light">
                             <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
-                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-light")->toHtml($article->content) //GitDown::parseAndCache($article->content) ////Illuminate\Support\Str::of($article->content)->markdown() !!}
+                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-light")->toHtml($article->content) //Illuminate\Support\Str::of($article->content)->markdown() !!}
                             </article>
                         </div>
                         <div class="col-lg-12 article-dark" style="display: none">
                             <article class="article text-left markdown-body {{ theme("text-gray-light", "text-gray") }}">
-                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-dark")->toHtml($article->content) //GitDown::parseAndCache($article->content) ////Illuminate\Support\Str::of($article->content)->markdown() !!}
+                                 {!! app(Spatie\LaravelMarkdown\MarkdownRenderer::class)->highlightTheme("github-dark")->toHtml($article->content) //Illuminate\Support\Str::of($article->content)->markdown() !!}
                             </article>
                         </div>
                     @endif
