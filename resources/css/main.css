@@ -914,17 +914,26 @@ article header p a {
 
 article.text-gray > pre.shiki {
     background-color: rgb(243, 244, 246)  !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
 }
 article.text-gray-light > pre.shiki {
-    background-color: rgb(19, 20, 21)  !important;
+    background-color: rgb(18, 18, 18)  !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
 }
 
 article.text-gray > p > code {
     background-color: rgb(243, 244, 246)  !important;
-    font-size: .875em !important;
+    font-size: 85% !important;
+    padding: .2em .4em !important;
+    border-radius: 6px !important;
+    
 }
 article.text-gray-light > p > code {
-    background-color: rgb(19, 20, 21)  !important;
-    font-size: .875em !important;
+    background-color: rgb(18, 18, 18)  !important;
+    font-size: 85% !important;
+    padding: .2em .4em !important;
+    border-radius: 6px !important;
 }
 
