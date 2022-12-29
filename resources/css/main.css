@@ -918,3 +918,10 @@ article.text-gray > pre.shiki {
 article.text-gray-light > pre.shiki {
     background-color: rgb(19, 20, 21)  !important;
 }
+
+article.text-gray > p > code {
+    background-color: rgb(243, 244, 246)  !important;
+}
+article.text-gray-light > p > code {
+    background-color: rgb(19, 20, 21)  !important;
+}
