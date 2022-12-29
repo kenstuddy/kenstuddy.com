@@ -921,7 +921,10 @@ article.text-gray-light > pre.shiki {
 
 article.text-gray > p > code {
     background-color: rgb(243, 244, 246)  !important;
+    font-size: .875em !important;
 }
 article.text-gray-light > p > code {
     background-color: rgb(19, 20, 21)  !important;
+    font-size: .875em !important;
 }
+
