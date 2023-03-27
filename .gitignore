@@ -16,3 +16,5 @@ yarn-error.log
 .sql
 package-lock.json
 composer.lock
+.phpunit.cache/test-results
+.phpunit.result.cache
