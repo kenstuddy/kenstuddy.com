@@ -5,11 +5,10 @@ namespace Database\Seeders;
 use App\Models\ArticlesText;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ArticlesTextTableSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $this->faker = Faker::create();
         $articlesText = new ArticlesText();

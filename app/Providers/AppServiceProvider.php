@@ -10,10 +10,8 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         //Set default string length to 191 to allow MySQL versions older than 5.7.7 on Windows to create indexes for migrations.
         Schema::defaultStringLength(191);
@@ -25,10 +23,8 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }

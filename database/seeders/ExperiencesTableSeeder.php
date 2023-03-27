@@ -5,11 +5,10 @@ namespace Database\Seeders;
 use App\Models\Experience;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ExperiencesTableSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $this->faker = Faker::create();
         $experienceYear = $this->faker->numberBetween(2015, 2017);

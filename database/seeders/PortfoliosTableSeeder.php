@@ -5,11 +5,10 @@ namespace Database\Seeders;
 use App\Models\Portfolio;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class PortfoliosTableSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $this->faker = Faker::create();
         $portfolios = $this->faker->numberBetween(2, 4);

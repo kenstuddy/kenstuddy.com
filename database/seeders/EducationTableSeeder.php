@@ -6,11 +6,10 @@ use App\Models\Education;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\DB;
 
 class EducationTableSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $this->faker = Faker::create();
         $graduationYear = $this->faker->numberBetween(2009, 2013);

@@ -9,12 +9,12 @@ use App\Models\Page;
 use App\Models\Portfolio;
 use App\Models\Slider;
 use App\Models\Subtitle;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         //Here we could use the DB query builder as it provides slightly better performance, but Eloquent provides extra functionality.
         $educations = Education::where('active', 1)->get();

@@ -5,11 +5,10 @@ namespace Database\Seeders;
 use App\Models\Slider;
 use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class SlidersTableSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         $this->faker = Faker::create();
         $slider = new Slider();

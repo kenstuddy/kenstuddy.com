@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Education;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -10,10 +9,8 @@ class EducationFactory extends Factory
 {
     /**
      * Define the model's default state.
-     *
-     * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'organization' => $this->faker->name(),

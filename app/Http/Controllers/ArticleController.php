@@ -5,21 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\ArticlesText;
 use App\Models\Contact;
-use App\Models\Education;
-use App\Models\Experience;
-use App\Models\Home;
 use App\Models\Page;
-use App\Models\Portfolio;
-use App\Models\Slider;
 use App\Models\Subtitle;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(): View
     {
-        $articles = Article::orderBy('published_at', 'DESC')->where('published', 1)->simplePaginate(5) ?? new Article();
+        $articles = Article::orderByDesc('published_at')->where('published', 1)->simplePaginate(5) ?? new Article();
         $page = Page::where('name', 'articles')->first() ?? new Page();
         $contact = Contact::where('name', 'articles')->first() ?? new Contact();
         $subtitles = Subtitle::where('name', 'articles')->first() ?? new Subtitle();
@@ -30,7 +24,7 @@ class ArticleController extends Controller
         return view('article.index', compact('articles', 'page', 'contact', 'subtitles', 'articlesText', 'useReCaptcha', 'reCaptchaKey'));
     }
 
-    public function show($slug)
+    public function show($slug): View
     {
         $article = Article::where('published', 1)->where('slug', $slug)->firstOrFail();
         $page = Page::where('name', 'article')->first() ?? new Page();

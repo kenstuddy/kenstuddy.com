@@ -9,10 +9,8 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
         //We should only run the seeders if this is a non-production environment.
         if (App::environment(['local', 'staging'])) {
