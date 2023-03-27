@@ -20,4 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 */
 
-Route::post('/contact/send', [ContactApiController::class, 'send']);
+Route::post('/contact/send', [ContactApiController::class, 'send'])->middleware(['throttle:3,60']);
