@@ -3,7 +3,7 @@
         <header class="section-header">
              <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}"><span>Education</span></h2>
             <div class="spacer"></div>
-            <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($subtitles['education_subtitle']) {{ $subtitles['education_subtitle'] }} @endisset</p>
+            <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($subtitles['education_subtitle']) {!! html_entity_decode($subtitles['education_subtitle']) !!} @endisset</p>
         </header>
         <div class="row">
             @foreach ($educations as $education)

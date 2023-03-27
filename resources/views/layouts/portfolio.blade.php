@@ -6,7 +6,7 @@
                         <span>Portfolio</span>
                     </h2>
                     <div class="spacer"></div>
-                    <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($subtitles['portfolio_subtitle']) {{ $subtitles['portfolio_subtitle'] }} @endisset</p>
+                    <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($subtitles['portfolio_subtitle']) {!! html_entity_decode($subtitles['portfolio_subtitle']) !!} @endisset</p>
                 </header>
             <div id="grid" class="row grid-wrapper">
                 @foreach ($portfolios as $portfolio)

@@ -15,7 +15,7 @@
                             <div class="col-lg-12">
                                 <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($article->subtitle) !!}</p>
                             </div>
-                            <p class="{{ theme("text-gray-light", "text-gray") }}">@if(!empty($articlesText['articles_posted_text'])){{ $articlesText['articles_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
+                            <p class="{{ theme("text-gray-light", "text-gray") }}">@if(!empty($articlesText['articles_posted_text'])){!! html_entity_decode($articlesText['articles_posted_text']) !!}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                             </p>
                             <p class="{{ theme("text-gray-light", "text-gray") }}"><a href="/article/{{$article->slug}}">@if(!empty($articlesText['article_link_text'])){{ $articlesText['article_link_text'] }}@endif</a></p>
                         </header>
