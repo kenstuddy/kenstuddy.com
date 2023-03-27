@@ -23,7 +23,7 @@
                                 @endif
                             </p>
                         </header>
-                        <p class="{{ theme("text-gray-light", "text-gray") }}">{{ $education->description }}</p>
+                        <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode(data_get($education, 'description', '')) !!}</p>
                     </article>
                 </div>
             @endforeach

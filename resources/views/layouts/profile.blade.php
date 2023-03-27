@@ -3,7 +3,7 @@
         <header class="section-header">
             <h2 class="section-title {{ theme("text-dark-title-light","text-dark-title") }}">{{ $page['title'] }}</h2>
             <div class="spacer"></div>
-            <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($page['subtitle']) {{ $page['subtitle'] }} @endisset</p>
+            <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">@isset($page['subtitle']) {!! html_entity_decode($page['subtitle']) !!} @endisset</p>
         </header>
         <div class="row">
             <div class="col-lg-0"></div>

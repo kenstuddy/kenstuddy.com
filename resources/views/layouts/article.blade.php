@@ -3,7 +3,7 @@
         <header class="section-header">
             <div class="spacer"></div>
             @isset($subtitles['article_subtitle'])
-                <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{{ $subtitles['article_subtitle'] }}</p>
+                <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($subtitles['article_subtitle']) !!}</p>
             @endisset
         </header>
         <div class="row">
@@ -16,14 +16,14 @@
                             </div>
                             <div class="text-left author-info">
                                 <h5 class="{{ theme("text-gray-light", "text-gray") }}">
-                                    {{ $article->author_name }}
+                                    {!! html_entity_decode($article->author_name) !!}
                                 </h5>
                                 <div>
                                     <p class="{{ theme("text-gray-light", "text-gray") }}">
-                                      {{ $article->byline }}
+                                    {!! html_entity_decode($article->byline) !!}
                                     </p>
                                     <p class="{{ theme("text-gray-light", "text-gray") }}">
-                                      @if(!empty($articlesText['article_posted_text'])){{ $articlesText['article_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
+                                      @if(!empty($articlesText['article_posted_text'])){!! html_entity_decode($articlesText['article_posted_text']) !!}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                                     </p>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
             <div class="col-lg-12" style="margin-bottom: -50px">
                 <article class="article center-block text-center">
                     <header>
-                        <h1 class="{{ theme("text-gray-light", "text-gray") }}">{{ $article->title }}</h1>
+                        <h1 class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($article->title) !!}</h1>
                         <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($article->description) !!}</p>
                     </header>
                 </article>
@@ -51,7 +51,7 @@
                  <header class="section-header">
                     <div class="spacer"></div>
                     @isset($subtitles['article_alternate_subtitle'])
-                        <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{{ $subtitles['article_alternate_subtitle'] }}</p>
+                        <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($subtitles['article_alternate_subtitle']) !!}</p>
                     @endisset
                 </header>
                 <div class="row">

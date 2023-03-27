@@ -25,7 +25,7 @@
                                 <p class="{{ theme("text-gray-light", "text-gray") }}">{{ $experience->company }} / {{ $experience->location }} / {!! html_entity_decode($experience->string_year) !!}</p>
                             @endif
                         </header>
-                        <p class="{{ theme("text-gray-light", "text-gray") }}">{{ $experience->description }}</p>
+                        <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode(data_get($experience, 'description', '')) !!}</p>
                     </article>
                 </div>
             @endforeach

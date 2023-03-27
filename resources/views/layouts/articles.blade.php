@@ -3,7 +3,7 @@
         <header class="section-header">
             <div class="spacer"></div>
             @isset($subtitles['articles_subtitle'])
-                <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{{ $subtitles['articles_subtitle'] }}</p>
+                <p class="section-subtitle {{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($subtitles['articles_subtitle']) !!}</p>
             @endisset
         </header>
         <div class="row">
@@ -13,7 +13,7 @@
                         <header>
                             <h3 class="articles-top"><a class="article-title {{ theme("text-gray-light", "text-gray") }}" href="/article/{{$article->slug}}">{{ $article->title }}</a></h3>
                             <div class="col-lg-12">
-                                <p class="{{ theme("text-gray-light", "text-gray") }}">{{ $article->subtitle }}</p>
+                                <p class="{{ theme("text-gray-light", "text-gray") }}">{!! html_entity_decode($article->subtitle) !!}</p>
                             </div>
                             <p class="{{ theme("text-gray-light", "text-gray") }}">@if(!empty($articlesText['articles_posted_text'])){{ $articlesText['articles_posted_text'] }}@endif {{ $article->created_at->diffForHumans() }} - {{ $article->created_at->toDayDateTimeString() }}
                             </p>
