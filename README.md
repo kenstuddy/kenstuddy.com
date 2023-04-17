@@ -8,15 +8,6 @@ My personal website. Created in 2018. Uses PHP with Laravel, MySQL, JavaScript w
 * Composer
 
 # How to Install
-Note: It is recommended that you install LAMP and Laravel with my LAMP and Laravel install scripts to ensure that you have all of the requirements.
-
-My LAMP install script is located at
-
-https://github.com/kenstuddy/Deploy-LAMP
-
-My Laravel install script is located at
-
-https://github.com/kenstuddy/Deploy-Laravel
 
 Clone the repository
 
