@@ -39,7 +39,7 @@ Build the CSS and JS assets with npm
 npm run dev
 ```
 
-After that, you need to create your .env file and enter your database credentials and destination email address for the contact form
+After that, you need to create your `.env` file and enter your database credentials and destination email address for the contact form
 
 ```
 cp .env.example .env
@@ -63,7 +63,7 @@ Optionally, if you would like to see some testing data, you can run the seeder
 php artisan db:seed
 ```
 
-If you have correctly set up your .env file, you should now be able to start the Laravel development server
+If you have correctly set up your `.env` file, you should now be able to start the Laravel development server
 
 ```
 php artisan serve
@@ -71,7 +71,7 @@ php artisan serve
 
 Visit the IP address (usually 127.0.0.1) http://127.0.0.1:8000 in your web browser.
 
-You can also run the included tests
+You can also run the included tests if you want to verify your setup is working
 
 ```
 php artisan test
