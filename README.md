@@ -51,7 +51,7 @@ npm run dev
 After that, you need to create your .env file and enter your database credentials and destination email address for the contact form
 
 ```
-mv .env.example .env
+cp .env.example .env
 ```
 
 Run the database migrations to create the database schema 
@@ -79,3 +79,9 @@ php artisan serve
 ```
 
 Visit the IP address (usually 127.0.0.1) http://127.0.0.1:8000 in your web browser.
+
+You can also run the included tests
+
+```
+php artisan test
+```
