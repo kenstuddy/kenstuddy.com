@@ -15,10 +15,10 @@
                 <a :href="primary_url" aria-label="Primary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-lin" :class="[slider_btn_class, slider_border_class]"><i class="fa my-fa-linkedin-square"></i></a>
                 <a :href="secondary_url" aria-label="Secondary URL" rel="noopener noreferrer" target="_blank" class="btn btn-round btn-clear btn-github" :class="[slider_btn_class, slider_border_class]"><i class="fa my-fa-github-square"></i></a>
             </div>
-            <a href="#" aria-label="Contact Me" alt="Contact Me" id="contact-button" @click.prevent="smoothScroll('page-contact')" class="btn btn-contact contact-me smooth-scroll " :class="[slider_btn_class, slider_btn_border_class]">{{ button_text }}</a>
+            <a href="#" aria-label="Contact Me" id="contact-button" @click.prevent="smoothScroll('page-contact')" class="btn btn-contact contact-me smooth-scroll " :class="[slider_btn_class, slider_btn_border_class]">{{ button_text }}</a>
         </div>
-        <a href="#" alt="Previous" aria-label="Previous Arrow" class="arrow arrow-prev" @click="previousSlide"></a>
-        <a href="#" alt="Next" aria-label="Next Arrow" class="arrow arrow-next" @click="nextSlide"></a>
+        <a href="#" aria-label="Previous Arrow" class="arrow arrow-prev" @click="previousSlide"></a>
+        <a href="#" aria-label="Next Arrow" class="arrow arrow-next" @click="nextSlide"></a>
     </div>
 </template>
 

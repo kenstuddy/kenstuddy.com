@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
-        @include('layouts.header')
+        @include('layouts.header', ['title' => $page['page_title']])
         @extends('layouts.headermeta')
-        @section('title', $page['page_title'])
     </head>
     <body class="{{ theme("bg-darker", "bg-white") }}">
+        @include('layouts.darkmode')
         @include('layouts.nav')
         <div id="app">
             @include('layouts.profile')

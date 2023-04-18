@@ -690,7 +690,7 @@ code {
     color: #e5e0d8 !important;
 }
 .text-gray-light {
-    color: #9f9788 !important;
+    color: #beb7a7 !important;
 }
 a.text-gray-light:hover {
     color: #3498db !important;
@@ -700,7 +700,7 @@ a.text-gray-light:hover {
     color: #555555 !important;
 }
 .text-dark-title-light {
-    color: #9f9788 !important;
+    color: #beb7a7 !important;
 }
 
 .text-slider-light {
@@ -822,10 +822,10 @@ a.text-gray-light:hover {
     color: #ffffff !important;
 }
 .text-contact-dark {
-    color: #ebeae9 !important;
+    color: #d1d1d1 !important;
 }
 .bg-contact-dark {
-    background: #2c688f !important;
+    background: #21526f !important;
 }
 .bg-contact-light {
     background: #007acd !important;
@@ -892,6 +892,38 @@ input:focus::placeholder, textarea:focus::placeholder {
     color: #D2D2D2 !important;
 }
 
+div.socia-icons > a.btn {
+    color: #ffffff !important;
+}
+
+#contact-button {
+    color: #ffffff !important;
+}
+
+.bg-darker > .container > p > a {
+    color: #5b97db !important;
+}
+
+.text-gray-light a {
+    color: #5b97db !important;
+}
+
+.bg-darker > .container > p > a:active, .bg-darker > .container > p > a:hover  {
+    color: #2daefa !important;
+}
+
+.text-gray-light a:active, .text-gray-light a:hover {
+    color: #2daefa !important;
+}
+
+.bg-darker div.socia-icons > a.btn {
+    color: #e5e0d8 !important;
+}
+
+.bg-darker #contact-button {
+    color: #e5e0d8 !important;
+}
+
 .article {
     text-align: left;
 }
@@ -936,4 +968,3 @@ article.text-gray-light > p > code {
     padding: .2em .4em !important;
     border-radius: 6px !important;
 }
-

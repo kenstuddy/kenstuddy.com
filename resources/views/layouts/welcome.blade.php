@@ -1,3 +1,3 @@
-<section id="page-welcome" class="page-welcome">
+<section id="page-welcome" class="page-welcome {{ theme("bg-gray-dark", "bg-gray") }}">
     <slider slider_btn_border_class="{{ theme("border-btn-dark", "border-btn-light") }}" slider_border_class="{{ theme("border-dark", "border-light") }}" slider_btn_class="{{ theme("btn-dark", "btn-light") }}" slider_text_class="{{ theme("text-slider-dark", "text-slider-light") }}" my_name="{{ $slider['my_name'] }}" my_title="{{ $slider['my_title'] }}" button_text="{{ $slider['button_text'] }}" primary_url="{{ $slider['primary_url'] }}" secondary_url="{{ $slider['secondary_url'] }}"></slider>
 </section>
