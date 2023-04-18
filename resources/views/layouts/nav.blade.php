@@ -14,7 +14,7 @@
                 <li class="nav-item"><a href="/#page-education" class="nav-link smooth-scroll {{ theme("text-gray-link", "text-gray-dark-link") }}">Education</a></li>
                 <li class="nav-item"><a href="/#page-experience" class="nav-link smooth-scroll {{ theme("text-gray-link", "text-gray-dark-link") }}">Experience</a></li>
                 <li class="nav-item"><a href="/#page-portfolio" class="nav-link smooth-scroll {{ theme("text-gray-link", "text-gray-dark-link") }}">Portfolio</a></li>
-                <li class="nav-item"><a href="#page-contact" class="nav-link smooth-scroll {{ theme("text-gray-link", "text-gray-dark-link") }}">Contact</a></li>
+                <li class="nav-item"><a @if(config("app.contact_form_on_article") === true || config("app.contact_form_on_articles")) href="#page-contact" @else href="/#page-contact" @endif class="nav-link smooth-scroll {{ theme("text-gray-link", "text-gray-dark-link") }}">Contact</a></li>
                 @if(config("app.articles_enabled") === true)
                     <li class="nav-item"><a href="/articles" class="nav-link {{ theme("text-gray-link", "text-gray-dark-link") }}">Articles</a></li>
                 @endif
