@@ -968,3 +968,29 @@ article.text-gray-light > p > code {
     padding: .2em .4em !important;
     border-radius: 6px !important;
 }
+
+.gloader {
+    display: none !important;
+}
+.gnext, .gprev, .gclose {
+    opacity: 0.6;
+}
+.gnext:active, .gprev:active, .gnext:hover, .gprev:hover, .gclose:active, .gclose:hover  {
+    opacity: 0.9;
+}
+@media (max-width: 992px) {
+    .glightbox-clean .gprev {
+      position: absolute;
+      top: 45%;
+      left: 30px;
+      width: 40px;
+      height: 50px;
+    }
+    .glightbox-clean .gnext {
+      position: absolute;
+      top: 45%;
+      right: 30px;
+      width: 40px;
+      height: 50px;
+    }
+}

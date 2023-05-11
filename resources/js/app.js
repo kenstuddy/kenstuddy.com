@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,17 +6,13 @@
 
 require('./bootstrap');
 
-import Vue from 'vue';
-import VueImg from 'v-img';
-import VeeValidate from 'vee-validate';
-import VueResource from 'vue-resource';
-import Slider from './components/Slider.vue';
-import Contact from './components/Contact.vue';
-
-Vue.use(VueImg);
-Vue.use(VeeValidate);
-Vue.use(VueResource);
-
+import { createApp } from 'vue';
+import { onMounted } from 'vue';
+import 'vee-validate';
+import Slider from './components/Slider';
+import Contact from './components/Contact';
+import Lightbox from './components/Lightbox';
+        
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -37,13 +32,16 @@ Vue.use(VueResource);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: "#app",
+const app = createApp({
     components: { 
-        "slider": Slider,
-        "contact": Contact
+        Slider,
+        Contact,
+        Lightbox
     },
-    mounted: function() {
-        
+    setup() {
+        onMounted(() => {
+        });
     },
 });
+
+app.mount("#app");

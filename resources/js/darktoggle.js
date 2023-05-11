@@ -13,10 +13,14 @@ toggleDarkMode = () => {
 loadDarkMode = () => {
     console.log("loading dark mode.");
     if (localStorage.getItem("darkmode") === "true") {
-        document.getElementById('darkmode').value = true;
+        if (document.getElementById('darkmode')) {
+            document.getElementById('darkmode').value = true;
+        }
         enableDarkMode();
     } else {
-        document.getElementById('darkmode').value = false;
+        if (document.getElementById('darkmode')) {
+            document.getElementById('darkmode').value = false;
+        }
         disableDarkMode();
     }
 }

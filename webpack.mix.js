@@ -15,6 +15,7 @@ mix.styles([
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/normalize.css/normalize.css',
     'node_modules/font-awesome/css/font-awesome.css',
+    'node_modules/glightbox/dist/css/glightbox.css',
     'resources/css/fonts.css',
     'resources/css/main.css'
 ], 'public/css/app.css')
@@ -22,8 +23,9 @@ mix.styles([
    .js([
     'resources/js/main.js',
     'node_modules/shiki/dist/index.js',
+    'node_modules/glightbox/dist/js/glightbox.js',
     'resources/js/app.js',
-], 'public/js/app.js').vue({ version: 2 });
+], 'public/js/app.js').vue({ version: 3 });
 
 if (mix.inProduction()) {
     mix.version();
