@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
+    import { onMounted } from 'vue';
     import GLightbox from 'glightbox';
     export default {
         name: "Lightbox",
