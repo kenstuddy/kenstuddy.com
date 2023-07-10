@@ -19,17 +19,24 @@ if (window.location.pathname == '/') {
 }
 
 /*
- * Since we are using invisible reCaptcha, we must execute recaptcha manually.
- * If we wanted to use regular reCaptcha, we could remove the MutationObserver.
+ * Since we are using invisible reCAPTCHA, we must execute recaptcha manually.
+ * If we wanted to use regular reCAPTCHA, we could remove the MutationObserver.
+ * We probably only want to check one field first before checking for reCAPTCHA,
+ * since if we check all fields it's possible the submit button could be clicked 
+ * very quickly before a reCAPTCHA response resulting in a failed submission.
  */
-const observer = new MutationObserver(() => {
-    if (window.grecaptcha && window.grecaptcha.execute) {
+const contactFormRecaptchaObserver = new MutationObserver(() => {
+    if (window.grecaptcha && window.grecaptcha.execute && isFieldNotEmpty("name")) {
         window.grecaptcha.execute();
     }
 });
-observer.observe(document.body, {
+contactFormRecaptchaObserver.observe(document.body, {
     childList: true,
     subtree: true,
     attributes: false,
     characterData: false,
 });
+
+function isFieldNotEmpty(field) {
+    return document.getElementById(field) && document.getElementById(field).value !== "";
+}
