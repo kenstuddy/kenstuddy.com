@@ -146,7 +146,7 @@
                     "message": this.message,
                     "g-recaptcha-response": this.use_recaptcha ? document.getElementById("g-recaptcha-response").value : ""
                 };
-                //Send the HTTP POST API request to be handled by the Laravel ContactController send method. This returns a Promise since it uses the then method.
+                //Send the HTTP POST API request to be handled by the Laravel ContactApiController send method. This returns a Promise since it uses the then method.
                 axios.post("/api/contact/send", data)
                     .then((response) => {
                         this.submitText = "Submitted Message.";
