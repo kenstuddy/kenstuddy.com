@@ -1,4 +1,9 @@
 /*
+ * This file hosts miscellaneous JavaScript features of this website, such as navbar smooth scrolling and optional reCAPTCHA handling.
+*/
+//If we want to have mobile clicks toggle the navbar, set this to true.
+const mobileLinkClickTogglesNavbar = true;
+/*
  * This adds smooth scrolling for all the links on the page.
  * Any links that require smooth scrolling need to have a class of "smooth-scroll".
  */
@@ -14,6 +19,13 @@ if (window.location.pathname == '/') {
             event.preventDefault();
             //Scroll the HTML element into the view of the browser using smooth scrolling.
             document.getElementById(item.href.substring(item.href.indexOf('#') + 1, item.href.length)).scrollIntoView({behavior: "smooth"});
+            //If we're on mobile view, collapse the navbar when clicking on a link.
+            if (window.innerWidth <= 768 && mobileLinkClickTogglesNavbar) {
+                const navbarToggleLabel = document.getElementById('navbar-toggle-label');
+                if (navbarToggleLabel) {
+                    navbarToggleLabel.click();
+                }
+            }
         });
     });
 }
