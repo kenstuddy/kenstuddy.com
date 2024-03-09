@@ -1,6 +1,6 @@
 /*
  * This file contains miscellaneous JavaScript features of this website, such as navbar smooth scrolling and optional reCAPTCHA handling.
-*/
+ */
 //If we want to have mobile clicks toggle the mobile navbar, set this to true.
 const mobileLinkClickTogglesNavbar = true;
 /*
