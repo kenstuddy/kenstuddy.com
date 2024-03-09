@@ -1,7 +1,7 @@
 /*
- * This file hosts miscellaneous JavaScript features of this website, such as navbar smooth scrolling and optional reCAPTCHA handling.
+ * This file contains miscellaneous JavaScript features of this website, such as navbar smooth scrolling and optional reCAPTCHA handling.
 */
-//If we want to have mobile clicks toggle the navbar, set this to true.
+//If we want to have mobile clicks toggle the mobile navbar, set this to true.
 const mobileLinkClickTogglesNavbar = true;
 /*
  * This adds smooth scrolling for all the links on the page.
