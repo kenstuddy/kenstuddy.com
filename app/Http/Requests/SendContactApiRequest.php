@@ -13,6 +13,7 @@ class SendContactApiRequest extends FormRequest
     {
         $useReCaptcha = config('services.recaptcha.enabled');
         $reCaptcha = $useReCaptcha ? 'required|recaptcha' : '';
+
         return [
             'name' => [
                 'required',

@@ -2,11 +2,11 @@
 
 namespace App\Mail;
 
+use App\Models\Contact as ContactModel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Contact as ContactModel;
 
 class Contact extends Mailable
 {
@@ -31,6 +31,7 @@ class Contact extends Mailable
         $contact = ContactModel::first();
         $response['message'] = $contact->contact_response ?? 'Thank you for your message. I will get back to you as soon as possible.';
         echo json_encode($response);
+
         return $view;
     }
 }

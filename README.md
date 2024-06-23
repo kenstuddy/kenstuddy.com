@@ -2,7 +2,7 @@
 My personal website. Created in 2018. Uses PHP with Laravel, MySQL, JavaScript with Vue (converted from jQuery), HTML5, and CSS3. Visit https://kenstuddy.com to see a live demo of this project. 
 
 # Requirements
-* PHP >= 8.1.0
+* PHP >= 8.2.0
 * Node >= 12.14.0
 * MySQL >= 5.7.0
 * Composer
