@@ -22,7 +22,6 @@ mix.styles([
    .scripts('resources/js/darktoggle.js','public/js/dark-toggle.js')
    .js([
     'resources/js/main.js',
-    'node_modules/shiki/dist/index.js',
     'node_modules/glightbox/dist/js/glightbox.js',
     'resources/js/app.js',
 ], 'public/js/app.js').vue({ version: 3 });
