@@ -19,7 +19,7 @@ class ContactsTableSeeder extends Seeder
         ];
         $contacts = 3;
         for ($contactsCounter = 0; $contactsCounter < $contacts; $contactsCounter++) {
-            $contact = new Contact();
+            $contact = new Contact;
             $contact->name = $contactNames[$contactsCounter];
             $contact->contact_email = $email;
             $contact->contact_sentence = $this->faker->sentence();

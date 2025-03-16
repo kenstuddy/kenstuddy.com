@@ -11,7 +11,7 @@ class ArticlesTextTableSeeder extends Seeder
     public function run(): void
     {
         $this->faker = Faker::create();
-        $articlesText = new ArticlesText();
+        $articlesText = new ArticlesText;
         $articlesText->name = 'articles';
         $articlesText->articles_link_text = 'Click here for more articles';
         $articlesText->article_link_text = 'Click here to read this article';

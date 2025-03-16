@@ -11,7 +11,7 @@ class SlidersTableSeeder extends Seeder
     public function run(): void
     {
         $this->faker = Faker::create();
-        $slider = new Slider();
+        $slider = new Slider;
         $slider->name = 'home';
         $slider->my_name = $this->faker->name();
         $slider->my_title = $this->faker->jobTitle();

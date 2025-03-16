@@ -14,7 +14,7 @@ class ExperiencesTableSeeder extends Seeder
         $experienceYear = $this->faker->numberBetween(2015, 2017);
         $experiences = $this->faker->numberBetween(1, 3);
         for ($experiencesCounter = 0; $experiencesCounter < $experiences; $experiencesCounter++) {
-            $experience = new Experience();
+            $experience = new Experience;
             $experience->position = $this->faker->jobTitle();
             $experience->company = $this->faker->company();
             $experience->location = $this->faker->city().', '.$this->faker->country();

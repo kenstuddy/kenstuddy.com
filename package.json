@@ -10,8 +10,10 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.25",
+        "@vue/compiler-sfc": "^3.2.47",
+        "axios": "^1.8.3",
         "bootstrap": "^5",
+        "concurrently": "^9.0.1",
         "es-abstract": "^1.14.2",
         "font-awesome": "4.3.0",
         "laravel-mix": "^6.0.12",
@@ -21,8 +23,7 @@
         "vee-validate": "^4.5.8",
         "vue": "^3.2.36",
         "vue-loader": "^16.2.0",
-        "vue-resource": "^1.5.1",
-        "@vue/compiler-sfc": "^3.2.47"
+        "vue-resource": "^1.5.1"
     },
     "dependencies": {
         "@vee-validate/rules": "^4.9.2",

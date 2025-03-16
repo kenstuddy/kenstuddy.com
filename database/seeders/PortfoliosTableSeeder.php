@@ -14,7 +14,7 @@ class PortfoliosTableSeeder extends Seeder
         $portfolios = $this->faker->numberBetween(2, 4);
         for ($portfoliosCounter = 0; $portfoliosCounter < $portfolios; $portfoliosCounter++) {
             $name = $this->faker->word();
-            $portfolio = new Portfolio();
+            $portfolio = new Portfolio;
             $portfolio->name = $portfoliosCounter + 1;
             $portfolio->alt_text = $name;
             $portfolio->title = $name;

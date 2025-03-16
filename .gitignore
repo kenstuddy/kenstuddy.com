@@ -5,8 +5,10 @@
 /public/js
 /public/secureconfigscripts
 /storage/*.key
+/storage/pail
 /vendor
 /.idea
+/.nova
 /.vagrant
 Homestead.json
 Homestead.yaml

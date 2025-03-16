@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //We should only run the seeders if this is a non-production environment.
+        // We should only run the seeders if this is a non-production environment.
         if (App::environment(['local', 'staging'])) {
             $this->call(SlidersTableSeeder::class);
             $this->call(EducationTableSeeder::class);

@@ -17,7 +17,7 @@ class ArticlesTableSeeder extends Seeder
         $articles = $this->faker->numberBetween(1, 50);
         for ($articlesCounter = 0; $articlesCounter < $articles; $articlesCounter++) {
             $title = $this->faker->sentence();
-            $article = new Article();
+            $article = new Article;
             $article->author_name = $name;
             $article->byline = $byline;
             $article->image = $image;

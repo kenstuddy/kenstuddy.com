@@ -12,7 +12,7 @@ class PagesTableSeeder extends Seeder
     {
         $this->faker = Faker::create();
         $name = $this->faker->name();
-        $homePage = new Page();
+        $homePage = new Page;
         $homePage->name = 'home';
         $homePage->title = $this->faker->words(2, true);
         $homePage->subtitle = $this->faker->sentence();
@@ -20,14 +20,14 @@ class PagesTableSeeder extends Seeder
         $homePage->page_title = $name.' - Home';
         $homePage->save();
 
-        $articlesPage = new Page();
+        $articlesPage = new Page;
         $articlesPage->name = 'articles';
         $articlesPage->page_title = $name.' - Articles';
         $articlesPage->title = 'Articles';
         $articlesPage->subtitle = $this->faker->sentence();
         $articlesPage->save();
 
-        $articlePage = new Page();
+        $articlePage = new Page;
         $articlePage->name = 'article';
         $articlePage->page_title = $name;
         $articlePage->save();

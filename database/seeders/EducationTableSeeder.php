@@ -32,7 +32,7 @@ class EducationTableSeeder extends Seeder
             'Computer Engineering',
         ];
         for ($educationsCounter = 0; $educationsCounter < $educations; $educationsCounter++) {
-            $education = new Education();
+            $education = new Education;
             $education->organization = Arr::random($organizations);
             $education->credential = Arr::random($credentials);
             $education->string_year = ' - Graduated: '.($graduationYear - ($educationsCounter * 2));

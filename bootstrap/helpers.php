@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This function is used for dark mode functionality,
  * it returns the first (dark) class string
