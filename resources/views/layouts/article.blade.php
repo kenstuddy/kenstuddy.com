@@ -82,7 +82,7 @@
              </div>
         </div>
         @if(!empty($articlesText['articles_link_text']))
-            <p><a href="/articles">{{ $articlesText['articles_link_text'] }}</a></p>
+            <p><a id="article-link-text" href="/articles">{{ $articlesText['articles_link_text'] }}</a></p>
         @endif
     </div>
 </section>
